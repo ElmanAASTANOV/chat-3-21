@@ -1,0 +1,44 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+  padding: .5rem 0;
+  margin: .5rem 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 5.21rem;
+  height: 5.21rem;
+  border-radius: 50%;
+  background-color: rgb(69, 69, 69);
+  margin-right: .9rem;
+  margin-left: -5px;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2px;
+}
+
+.message {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.time {
+  margin-right: -5px;
+  margin-bottom: 9px;
+}
