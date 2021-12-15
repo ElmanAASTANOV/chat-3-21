@@ -1,10 +1,12 @@
+import Settings from "./Settings/Settings";
+
 const Main = () => {
     return (<div id="main-layout">
         <div className="sidebar">
             Sidebar
         </div>
         <div className="pages">
-            <h1>Pages</h1>
+            <Settings/>
         </div>
     </div>)
 }
