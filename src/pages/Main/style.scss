@@ -2,16 +2,8 @@
     height: 100vh;
     background-color: #eaeaea;
     display: flex;
-    padding: 3.5rem 3.2rem;
-
-    .sidebar{
-        background-color: blue;
-        width: 18.6rem;
-    }
-
-    .pages{
-        background-color: rgb(78, 170, 78);
-        flex-grow: 1;
-        margin-left: 4.3rem;
-    }
+    padding: 2rem 3.2rem;
+#right-side{
+    flex-grow: 1;
+}
 }
