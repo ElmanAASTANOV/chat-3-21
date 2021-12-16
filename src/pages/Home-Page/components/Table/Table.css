@@ -8,7 +8,7 @@
   margin: .5rem 0;
 }
 
-.wrapper {
+.left {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,4 +41,22 @@
 .time {
   margin-right: -5px;
   margin-bottom: 9px;
+}
+
+.call-icon {
+  /* width: 50px;
+  height: 50px; */
+}
+
+.callMade {
+}
+
+.callReceived {
+}
+
+.videoCam {
+}
+
+.message-sent {
+  /* display: ; */
 }

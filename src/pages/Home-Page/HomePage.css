@@ -62,7 +62,7 @@
   overflow-y: hidden;
 }
 
-.groupCalls {
+.recentCalls {
   width: 36.4rem;
   grid-area: groupCalls;
   background-color: var(--white);
