@@ -4,13 +4,20 @@
     justify-content: center;
     align-items: center;
     form{
-        width: 35rem;
-        height: 35rem;
+        width: 45rem;
+        height: 40rem;
         border: 2px solid #f5f5f5;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 2rem;
         position: relative;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        border-radius: .8rem;
     }
+    & *{
+        margin-bottom: 1rem;
+    }
+
 }

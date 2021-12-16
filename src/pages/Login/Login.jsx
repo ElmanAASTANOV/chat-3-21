@@ -7,7 +7,7 @@ const Login = () =>{
                <Input />
                <PasswordInput />
                <Button>
-                   Log in
+                   Log In
                </Button>
            </form>
     </section>)
