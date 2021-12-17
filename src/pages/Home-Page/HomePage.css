@@ -5,7 +5,6 @@
 .homePage {
   height: 100%;
   background-color: #eaeaea;
-  /* flex-grow: 1; */
   margin-left: 4.3rem;
   display: grid;
   grid-template-areas: 
@@ -14,7 +13,7 @@
     "recents friends groupCalls"
     ;
   column-gap: 2.2rem;
-  row-gap: 4.3rem;
+  row-gap: 1.2rem;
   grid-template-columns: 42.7rem 1fr 1fr;
   grid-template-rows: 5.9rem 0.75fr 1fr;
 }
@@ -24,50 +23,54 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .searchBar {
+  position: relative;
   min-width: 42.7rem;
   grid-area: searchBar;
-  padding: 0 2rem;
   background-color: var(--white);
-
 }
 
 .groups {
+  position: relative;
   min-width: 42.7rem;
+  max-height: 27rem;
   grid-area: groups;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
-  overflow-y: hidden;
+  overflow: auto;
 }
 
 .recents {
+  position: relative;
   min-width: 42.7rem;
   grid-area: recents;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
-  overflow-y: hidden;
+  overflow: auto;
 }
 
 .friends {
+  position: relative;
   min-width: 36.4rem;
   grid-area: friends;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
-  overflow-y: hidden;
+  overflow: auto;
 }
 
 .recentCalls {
+  position: relative;
   width: 36.4rem;
   grid-area: groupCalls;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
-  overflow-y: hidden;
+  overflow: auto;
 }

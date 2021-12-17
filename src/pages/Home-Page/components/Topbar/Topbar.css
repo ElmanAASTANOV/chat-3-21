@@ -1,10 +1,14 @@
 .top-bar {
-  height: 5.6rem;
+  position: sticky;
+  top: 0;
+  min-height: 5.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 2rem;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
+  padding: 0 2rem;
+  z-index: 3;
 }
 
 p.heading {
@@ -21,7 +25,7 @@ p.heading {
   justify-content: center;
 }
 
-span {
+span.dot {
   width: 4px;
   height: 4px;
   border-radius: 50%;
