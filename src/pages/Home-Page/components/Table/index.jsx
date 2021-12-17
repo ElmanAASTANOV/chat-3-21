@@ -1,5 +1,5 @@
 import ContactItem from './contactItem';
-import './Table.css'
+import './Table.scss'
 import Table from "./Table";
 export default Table;
 export {ContactItem} 

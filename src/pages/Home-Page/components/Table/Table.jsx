@@ -4,7 +4,7 @@ const Table = ( {className, children} ) => {
       <div className="contact-list">
         {children}
       </div>
-  );
+  )
 }
 
 export default Table;
