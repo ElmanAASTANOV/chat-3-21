@@ -18,12 +18,12 @@ const ContactItem = ({ name, message, time, callIcon, callMade, callReceived, vi
       </div>
       <div className="right">
         {time && <div className='time'>{time}</div>}
-        {callMade && <div className="callMade">< CallMadeIcon fontSize='' /></div>}
-        {callReceived && <div className="callReceived">< CallReceivedIcon fontSize='' /></div>}
-        {callIcon && <div className="call-icon">< CallIcon fontSize='' /></div>}
-        {videoCam && <div className="videoCam">< VideocamIcon fontSize='' /></div>}
-        {done && <div className="message-sent">< DoneIcon fontSize='' /></div>}
-        {doneAll && <div className="message-delivered">< DoneAllIcon fontSize='' /></div>}
+        {callMade && < CallMadeIcon fontSize='' className="callMade" />}
+        {callReceived && < CallReceivedIcon fontSize='' className="callReceived" />}
+        {callIcon && < CallIcon fontSize='' className="call-icon" />}
+        {videoCam && < VideocamIcon fontSize='' className="videoCam" />}
+        {done && < DoneIcon fontSize='' className="message-sent" />}
+        {doneAll && < DoneAllIcon fontSize='' className="message-delivered" />}
       </div>
     </div>
   )

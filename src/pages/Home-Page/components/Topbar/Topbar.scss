@@ -10,6 +10,10 @@
   padding: 0 2rem;
   z-index: 1;
 
+  & > .searchIcon {
+    font-size: 40px;
+  }
+
   & > p.heading {
     margin: 0;
     padding: 0;

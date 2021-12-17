@@ -8,7 +8,7 @@ const HomePage = () => {
     <div className="homePage">
 
       <div className="searchBar">
-        <Topbar />
+        <Topbar heading = 'Search' searchIcon = 'true'/>
       </div>
 
       <div className="groups">
