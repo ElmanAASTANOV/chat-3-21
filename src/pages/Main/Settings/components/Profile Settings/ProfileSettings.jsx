@@ -1,33 +1,42 @@
 import "./style.scss"
-import img from "img/profilePhoto.jpg"
+import User from "./User/User"
+import{AiTwotoneEdit,AiOutlineUser,AiFillInfoCircle,AiOutlineShareAlt}  from "react-icons/ai"
+import {MdWallpaper} from "react-icons/md"
+import{BiPhotoAlbum,BiHelpCircle} from "react-icons/bi"
+
 
 const profileSettings=[
-    {title:"Profile."},
-    {title:"Edit Profile Name."},
-    {title:"Edit Profile Status Info."},
-    {title:"Edit Profile Photo."},
-    {title:"Help."},
-    {title:"Change Wallpaper."},
-    {title:"Invite."}
+    {icon:<AiOutlineUser/> ,name:"Profile."},
+    {icon:<AiTwotoneEdit/>,name:"Edit Profile Name."},
+    {icon:<AiFillInfoCircle/>,name:"Edit Profile Status Info."},
+    {icon:<BiPhotoAlbum/>,name:"Edit Profile Photo."},
+    {icon:<BiHelpCircle/>,name:"Help."},
+    {icon:<MdWallpaper/>,name:"Change Wallpaper."},
+    {icon:<AiOutlineShareAlt/>,name:"Invite."}
 
 ]
 
 const ProfileSettings=()=>{
     return(
         <div className="profile-settings" >
-            <div id="profile">
-            <h3>Profile Settings</h3>
-            <img src={img} alt="imagephoto" id="img-photo" />
-            <div id="user">
-            <h5>Krishna</h5>
-            <p>Stay home stay safe</p>
-            </div>
-            </div>
+            <User/>
             <div id="settings">
+                <div className="icons">
+                  {profileSettings.map((icon)=>{
+                      return(
+                          <li>{icon.icon}</li>
+                      )
+                  })}
+                
+                </div>
+                <div className="title">
                 {profileSettings.map(title=>{
                     return(
-                <li>{title.title}</li> 
+                <li onClick={()=>{
+
+                }}><a href="/">{title.name}</a></li> 
                 )})}
+                </div>
             </div>
         </div>
         
