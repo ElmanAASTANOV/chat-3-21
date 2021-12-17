@@ -1,10 +1,13 @@
 import "./App.css";
 import Main from 'pages/Main';
+import { AiOutlineSearch } from "react-icons/ai";
+
+
+
 function App() {
   return (
     <div className="App">
-      <p>lorem5</p>
-      <Main />
+      <Main /> <AiOutlineSearch />
     </div>
   );
 }
