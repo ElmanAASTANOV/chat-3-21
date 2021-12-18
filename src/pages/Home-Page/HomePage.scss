@@ -2,7 +2,7 @@
   --white: #fff;
 }
 
-div.homePage {
+div.ehomePage {
   height: 100%;
   background-color: #eaeaea;
   margin-left: 4.3rem;
@@ -26,14 +26,14 @@ div.homePage {
     display: none;
   }
   
-  & > .searchBar {
+  & > .esearchBar {
     position: relative;
     min-width: 42.7rem;
     grid-area: searchBar;
     background-color: var(--white);
   }
   
-  & > .groups {
+  & > .egroups {
     position: relative;
     min-width: 42.7rem;
     max-height: 27rem;
@@ -44,7 +44,7 @@ div.homePage {
     overflow: auto;
   }
   
-  & > .recents {
+  & > .erecents {
     position: relative;
     min-width: 42.7rem;
     grid-area: recents;
@@ -54,7 +54,7 @@ div.homePage {
     overflow: auto;
   }
   
-  & > .friends {
+  & > .efriends {
     position: relative;
     min-width: 36.4rem;
     grid-area: friends;
@@ -64,7 +64,7 @@ div.homePage {
     overflow: auto;
   }
   
-  & > .recentCalls {
+  & > .erecentCalls {
     position: relative;
     width: 36.4rem;
     grid-area: groupCalls;

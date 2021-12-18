@@ -29,13 +29,13 @@ const HomePage = () => {
   }, [])
 
   return (
-    <div className="homePage">
+    <div className="ehomePage">
 
-      <div className="searchBar">
+      <div className="esearchBar">
         <Topbar heading='Search' searchIcon='true' />
       </div>
 
-      <div className="groups">
+      <div className="egroups">
         <Topbar heading='Groups' />
         <Table>
           {
@@ -47,7 +47,7 @@ const HomePage = () => {
         </Table>
       </div>
 
-      <div className="recents">
+      <div className="erecents">
         <Topbar heading='Recents' />
         <Table>
           {
@@ -64,7 +64,7 @@ const HomePage = () => {
         </Table>
       </div>
 
-      <div className="friends">
+      <div className="efriends">
         <Topbar heading='Friends' />
         <Table>
           {
@@ -77,7 +77,7 @@ const HomePage = () => {
         </Table>
       </div>
 
-      <div className="recentCalls">
+      <div className="erecentCalls">
         <Topbar heading='Recent Calls' />
         <Table>
           {

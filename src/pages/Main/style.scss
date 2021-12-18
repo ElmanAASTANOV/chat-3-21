@@ -5,8 +5,18 @@
     padding: 3.5rem 3.2rem;
 
     .sidebar{
-        background-color: blue;
+        background-color: rgb(74, 119, 255);
         width: 18.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 2rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
     }
 
     .pages{

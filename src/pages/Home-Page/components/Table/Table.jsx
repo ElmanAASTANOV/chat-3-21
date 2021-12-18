@@ -1,7 +1,7 @@
 const Table = ( {className, children} ) => {
 
   return (
-      <div className="contact-list">
+      <div className="econtact-list">
         {children}
       </div>
   )

@@ -1,4 +1,4 @@
-.top-bar {
+.etop-bar {
   position: sticky;
   top: 0;
   min-height: 5.6rem;
@@ -10,24 +10,25 @@
   padding: 0 2rem;
   z-index: 1;
 
-  & > .searchIcon {
+  & > .esearchIcon {
     font-size: 40px;
   }
 
-  & > p.heading {
+  & > p.eheading {
     margin: 0;
     padding: 0;
     font-size: 20px;
     font-weight: 600;
   }
   
-  & > .three-dots {
+  & > .ethree-dots {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   
-    & > span.dot {
+    & > span.edot {
+      position: initial !important;
       width: 4px;
       height: 4px;
       border-radius: 50%;

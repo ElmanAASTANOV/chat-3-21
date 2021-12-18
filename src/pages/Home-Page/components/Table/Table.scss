@@ -1,4 +1,4 @@
-.contact {
+.econtact {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,13 +7,14 @@
   padding: 0.5rem 2rem;
   margin: 0.5rem 0;
   position: relative;
+  cursor: pointer;
 
-  & > .left {
+  & > .eleft {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    & > .profile-picture {
+    & > .eprofile-picture {
       width: 5.21rem;
       height: 5.21rem;
       border-radius: 50%;
@@ -22,8 +23,8 @@
       margin-left: -5px;
     }
 
-    & .name-message {
-      & > .name {
+    & .ename-message {
+      & > .ename {
         display: block;
         font-size: 1.4rem;
         font-weight: 600;
@@ -32,7 +33,7 @@
         margin-bottom: 2px;
       }
 
-      & > .message {
+      & > .emessage {
         font-size: 12px;
         font-weight: 400;
         margin: 0;
@@ -41,15 +42,14 @@
     }
   }
 
-  & > .right {
+  & > .eright {
     display: flex;
-    background-color: aqua;
 
     & > * {
       margin: 0 1rem;
     }
 
-    & > .time {
+    & > .etime {
       margin-right: -5px;
       margin-bottom: 9px;
       position: absolute;
@@ -57,53 +57,53 @@
       right: 30px;
     }
 
-    & > .callMade,
-    .callReceived {
+    & > .ecallMade,
+    .ecallReceived {
       font-size: 25px;
       position: absolute;
       bottom: 10px;
       right: 80px;
     }
 
-    & > .callMade {
+    & > .ecallMade {
       color: #00ff38;
     }
 
-    & > .callReceived {
+    & > .ecallReceived {
       color: #f00;
     }
 
-    & > .call-icon {
+    & > .ecall-icon {
       font-size: 25px;
       right: 24px;
     }
 
-    & > .call-icon, .videoCam {
+    & > .ecall-icon, .evideoCam {
       color: #1a66ff;
       position: absolute;
       top: 15px;
     }
 
-    & > .videoCam {
+    & > .evideoCam {
       font-size: 30px;
       right: 20px;
     }
 
-    & > .message-sent,
-    .message-delivered,
-    .message-seen {
+    & > .emessage-sent,
+    .emessage-delivered,
+    .emessage-seen {
       font-size: 20px;
       position: absolute;
       bottom: 4px;
       right: 23px;
     }
 
-    & > .message-sent,
-    .message-delivered {
+    & > .emessage-sent,
+    .emessage-delivered {
       color: #a4a4a4;
     }
 
-    & > .message-seen {
+    & > .emessage-seen {
       color: #1a66ff;
     }
   }
