@@ -99,6 +99,13 @@
     
     & > .message-delivered {
       font-size: 20px;
+      color: #A4A4A4;
+      position: absolute;
+      bottom: 0px;
+      right: 20px;
+    }
+    & > .message-seen {
+      font-size: 20px;
       color: #1A66FF;
       position: absolute;
       bottom: 0px;

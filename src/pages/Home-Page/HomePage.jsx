@@ -1,33 +1,48 @@
 import Table, { ContactItem } from './components/Table';
 import Topbar from './components/Topbar';
-import { dummyData } from './DummyData';
 import { getGroups } from 'api/groups';
+import { getRecents } from 'api/recents';
+import { getFriends } from 'api/friends';
+import { getRecentCalls } from 'api/recentCalls';
 import { useState, useEffect } from 'react';
 
 const HomePage = () => {
 
   const [groups, setGroups] = useState([]);
+  const [recents, setRecents] = useState([]);
+  const [friends, setFriends] = useState([]);
+  const [recentCalls, setRecentCalls] = useState([]);
 
   useEffect(() => {
     getGroups()
-    .then(res => setGroups(res))
-    .catch(err => console.log(err))
+      .then(res => setGroups(res))
+      .catch(err => console.log(err))
+    getRecents()
+      .then(res => setRecents(res))
+      .catch(err => console.log(err))
+    getFriends()
+      .then(res => setFriends(res))
+      .catch(err => console.log(err))
+    getRecentCalls()
+      .then(res => setRecentCalls(res))
+      .catch(err => console.log(err))
   }, [])
 
   return (
     <div className="homePage">
 
       <div className="searchBar">
-        <Topbar heading = 'Search' searchIcon = 'true'/>
+        <Topbar heading='Search' searchIcon='true' />
       </div>
 
       <div className="groups">
         <Topbar heading='Groups' />
         <Table>
           {
-            groups.map(data => <ContactItem
+            groups.map((data, index) => <ContactItem
+              key={index}
               name={data.name}
-              message={data.message} />)
+              message={data.lastMessage} />)
           }
         </Table>
       </div>
@@ -36,12 +51,15 @@ const HomePage = () => {
         <Topbar heading='Recents' />
         <Table>
           {
-            dummyData.recents.map(data => <ContactItem
-              name={data.name}
-              message={data.message}
-              time={data.time}
-              done={data.done}
-              doneAll={data.doneAll} />)
+            recents.map((data, index) => <ContactItem
+              key={index}
+              name={data.user.name}
+              surname={data.user.surname}
+              message={data.message.content} // Kiran message property should not be array or all of them must be array
+              time={data.message.date}
+              status={data.message.status}
+              type={data.message.type}
+              />)
           }
         </Table>
       </div>
@@ -50,10 +68,11 @@ const HomePage = () => {
         <Topbar heading='Friends' />
         <Table>
           {
-            dummyData.friends.map(data => <ContactItem
-              name={data.name}
-              message={data.message}
-              time={data.time} />)
+            friends.map((data, index) => <ContactItem
+              key={index}
+              name={data.user.name}
+              message={data.message.content}
+              time={data.message.date} />)
           }
         </Table>
       </div>
@@ -62,13 +81,13 @@ const HomePage = () => {
         <Topbar heading='Recent Calls' />
         <Table>
           {
-            dummyData.recentCalls.map(data => <ContactItem
-              name = {data.name}
-              message = {data.time}
-              callIcon = {data.callIcon}
-              videoCam = {data.videoCam}
-              callReceived = {data.callReceived}
-              callMade = {data.callMade} />)
+            recentCalls.map((data, index) => <ContactItem
+              key={index}
+              name={data.user.name}
+              message={data.date}
+              callType={data.callType}
+              messageType={data.messageType}
+            />)
           }
         </Table>
       </div>
