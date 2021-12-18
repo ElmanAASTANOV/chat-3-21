@@ -10,7 +10,8 @@ const HomePage = () => {
 
   useEffect(() => {
     getGroups()
-    .then(res => console.log(res))
+    .then(res => setGroups(res))
+    .catch(err => console.log(err))
   }, [])
 
   return (
