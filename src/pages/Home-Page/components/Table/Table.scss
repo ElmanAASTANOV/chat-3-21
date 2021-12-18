@@ -4,21 +4,21 @@
   align-items: center;
   border-bottom: 1px solid grey;
   border-radius: 0;
-  padding: .5rem 2rem;
-  margin: .5rem 0;
+  padding: 0.5rem 2rem;
+  margin: 0.5rem 0;
   position: relative;
 
   & > .left {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+
     & > .profile-picture {
       width: 5.21rem;
       height: 5.21rem;
       border-radius: 50%;
       background-color: rgb(172, 67, 67);
-      margin-right: .9rem;
+      margin-right: 0.9rem;
       margin-left: -5px;
     }
 
@@ -31,8 +31,8 @@
         padding: 0;
         margin-bottom: 2px;
       }
-      
-      & > .message  {
+
+      & > .message {
         font-size: 12px;
         font-weight: 400;
         margin: 0;
@@ -44,11 +44,11 @@
   & > .right {
     display: flex;
     background-color: aqua;
-  
+
     & > * {
       margin: 0 1rem;
     }
-  
+
     & > .time {
       margin-right: -5px;
       margin-bottom: 9px;
@@ -56,60 +56,55 @@
       top: 15px;
       right: 30px;
     }
-    
-    & > .call-icon {
+
+    & > .callMade,
+    .callReceived {
       font-size: 25px;
-      color: #1A66FF;
       position: absolute;
-      top: 15px;
-      right: 24px;
+      bottom: 10px;
+      right: 80px;
     }
-    
+
     & > .callMade {
-      font-size: 25px;
-      color: #00FF38;
-      position: absolute;
-      bottom: 10px;
-      right: 80px;
+      color: #00ff38;
     }
-    
+
     & > .callReceived {
-      position: absolute;
-      bottom: 10px;
-      right: 80px;
-      font-size: 25px;
       color: #f00;
     }
-    
-    & > .videoCam {
-      font-size: 30px;
-      color: #1A66FF;
+
+    & > .call-icon {
+      font-size: 25px;
+      right: 24px;
+    }
+
+    & > .call-icon, .videoCam {
+      color: #1a66ff;
       position: absolute;
       top: 15px;
+    }
+
+    & > .videoCam {
+      font-size: 30px;
       right: 20px;
     }
-    
-    & > .message-sent {
+
+    & > .message-sent,
+    .message-delivered,
+    .message-seen {
       font-size: 20px;
-      color: #A4A4A4;
       position: absolute;
-      bottom: 0px;
-      right: 20px;
+      bottom: 4px;
+      right: 23px;
     }
-    
-    & > .message-delivered {
-      font-size: 20px;
-      color: #A4A4A4;
-      position: absolute;
-      bottom: 0px;
-      right: 20px;
+
+    & > .message-sent,
+    .message-delivered {
+      color: #a4a4a4;
     }
+
     & > .message-seen {
-      font-size: 20px;
-      color: #1A66FF;
-      position: absolute;
-      bottom: 0px;
-      right: 20px;
+      color: #1a66ff;
     }
   }
 }

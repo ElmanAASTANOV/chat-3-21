@@ -1,4 +1,4 @@
-import HomePage from 'pages/Home-Page/HomePage';
+import HomePage from 'pages/Home-Page';
 // import Notifications  from 'pages/Notifications';
 
 const Main = () => {
