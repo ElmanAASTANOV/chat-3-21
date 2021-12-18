@@ -1,8 +1,17 @@
 import Table, { ContactItem } from './components/Table';
 import Topbar from './components/Topbar';
 import { dummyData } from './DummyData';
+import { getGroups } from 'api/groups';
+import { useState, useEffect } from 'react';
 
 const HomePage = () => {
+
+  const [groups, setGroups] = useState([]);
+
+  useEffect(() => {
+    getGroups()
+    .then(res => console.log(res))
+  }, [])
 
   return (
     <div className="homePage">
@@ -15,7 +24,7 @@ const HomePage = () => {
         <Topbar heading='Groups' />
         <Table>
           {
-            dummyData.groups.map(data => <ContactItem
+            groups.map(data => <ContactItem
               name={data.name}
               message={data.message} />)
           }

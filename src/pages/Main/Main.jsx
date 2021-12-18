@@ -1,12 +1,14 @@
+import HomePage from 'pages/Home-Page/HomePage';
 import Notifications  from 'pages/Notifications';
+
 const Main = () => {
     return (<div id="main-layout">
         <div className="sidebar">
         
         </div>
         <div className="pages">
-
-        <Notifications />
+        < HomePage />
+        {/* <Notifications /> */}
         </div>
     </div>)
 }
