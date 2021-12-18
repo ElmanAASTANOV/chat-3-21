@@ -6,9 +6,7 @@ const Main = () => {
         </div>
         <div className="pages">
 
-            
         <Notifications />
-
         </div>
     </div>)
 }
