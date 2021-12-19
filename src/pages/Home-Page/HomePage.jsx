@@ -5,6 +5,8 @@ import { getRecents } from 'api/recents';
 import { getFriends } from 'api/friends';
 import { getRecentCalls } from 'api/recentCalls';
 import { useState, useEffect } from 'react';
+import SearchIcon from '@mui/icons-material/Search';
+
 
 const HomePage = () => {
 
@@ -30,9 +32,14 @@ const HomePage = () => {
 
   return (
     <div className="ehomePage">
-
       <div className="esearchBar">
-        <Topbar heading='Search' searchIcon='true' />
+        <SearchIcon fontSize='' className='esearchIcon' />
+        <input className='searchBar' type="text" placeholder='Search' />
+        <div className="ethree-dots">
+          <span className="edot"></span>
+          <span className="edot"></span>
+          <span className="edot"></span>
+        </div>
       </div>
 
       <div className="egroups">
@@ -59,7 +66,7 @@ const HomePage = () => {
               time={data.message.date}
               status={data.message.status}
               type={data.message.type}
-              />)
+            />)
           }
         </Table>
       </div>

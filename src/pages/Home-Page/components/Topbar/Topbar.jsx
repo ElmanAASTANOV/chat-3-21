@@ -1,10 +1,7 @@
-import SearchIcon from '@mui/icons-material/Search';
-
-const TopBar = ({heading, searchIcon}) => {
+const TopBar = ({heading}) => {
   
   return (
     <div className="etop-bar">
-      {searchIcon && <SearchIcon fontSize='' className='esearchIcon'/>}
       <p className='eheading'>{heading}</p>
       <div className="ethree-dots">
         <span className="edot"></span>

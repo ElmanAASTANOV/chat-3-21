@@ -31,6 +31,43 @@ div.ehomePage {
     min-width: 42.7rem;
     grid-area: searchBar;
     background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    & > .esearchIcon {
+      font-size: 3rem;
+    }
+    
+    & > input.searchBar {
+      display: inline-block;
+      width: 100% !important;
+      height: 80%;
+      border: none;
+      font-size: 24px;
+      padding-left: 2rem;
+    }
+
+    & > input.searchBar:focus {
+      outline: none;
+    }
+
+    & > .ethree-dots {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      & > span.edot {
+        position: initial;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        margin: 2px 0;
+        background-color: #1A66FF;
+      }
+    }
   }
   
   & > .egroups {
