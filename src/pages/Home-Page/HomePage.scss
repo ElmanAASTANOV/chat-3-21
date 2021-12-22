@@ -14,7 +14,7 @@ div.ehomePage {
     ;
   column-gap: 2.2rem;
   row-gap: 1.2rem;
-  grid-template-columns: 42.7rem 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr;
   grid-template-rows: 5.9rem 0.75fr 1fr;
 
   & > * {
@@ -28,7 +28,6 @@ div.ehomePage {
   
   & > .esearchBar {
     position: relative;
-    min-width: 42.7rem;
     grid-area: searchBar;
     background-color: var(--white);
     display: flex;
@@ -42,7 +41,6 @@ div.ehomePage {
     
     & > input.searchBar {
       display: inline-block;
-      width: 100% !important;
       height: 80%;
       border: none;
       font-size: 24px;
@@ -72,7 +70,6 @@ div.ehomePage {
   
   & > .egroups {
     position: relative;
-    min-width: 42.7rem;
     max-height: 27rem;
     grid-area: groups;
     background-color: var(--white);
@@ -83,7 +80,6 @@ div.ehomePage {
   
   & > .erecents {
     position: relative;
-    min-width: 42.7rem;
     grid-area: recents;
     background-color: var(--white);
     display: flex;
@@ -93,7 +89,6 @@ div.ehomePage {
   
   & > .efriends {
     position: relative;
-    min-width: 36.4rem;
     grid-area: friends;
     background-color: var(--white);
     display: flex;
@@ -103,7 +98,6 @@ div.ehomePage {
   
   & > .erecentCalls {
     position: relative;
-    width: 36.4rem;
     grid-area: groupCalls;
     background-color: var(--white);
     display: flex;
