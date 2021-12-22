@@ -6,21 +6,22 @@ import { getFriends } from 'api/friends';
 import { getRecentCalls } from 'api/recentCalls';
 import { useState, useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
+import {useSelector, useDispatch} from 'react-redux';
 
 
 const HomePage = () => {
-
-  const [groups, setGroups] = useState([]);
-  const [recents, setRecents] = useState([]);
+  const dispatch = useDispatch();
+  const groups = useSelector(store => store.groups);
+  const recents = useSelector(store => store.recents);
   const [friends, setFriends] = useState([]);
   const [recentCalls, setRecentCalls] = useState([]);
 
   useEffect(() => {
     getGroups()
-      .then(res => setGroups(res))
+      .then(res => dispatch({type: "setGroups", payload: res }))
       .catch(err => console.log(err))
     getRecents()
-      .then(res => setRecents(res))
+      .then(res =>dispatch({type: "setRecents", payload: res }))
       .catch(err => console.log(err))
     getFriends()
       .then(res => setFriends(res))
@@ -28,7 +29,7 @@ const HomePage = () => {
     getRecentCalls()
       .then(res => setRecentCalls(res))
       .catch(err => console.log(err))
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="ehomePage">

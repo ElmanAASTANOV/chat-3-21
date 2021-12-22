@@ -8,7 +8,7 @@ const Main = () => {
     const navigate = useNavigate()
     return (
         <div id="main-layout">
-            <div className="sidebar">
+            <div className="sidebar" >
             <SideBar menus = {mainPageMenu} logout = {LogOut} onChangeMenu = {key => navigate(`${key}`)}/>
             </div>
 
