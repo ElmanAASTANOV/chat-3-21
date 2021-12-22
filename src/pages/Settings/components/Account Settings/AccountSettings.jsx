@@ -24,7 +24,7 @@ const AccountSettings=()=>{
         <div className="account-settings" >
             <h3>Account Settings</h3>
             <div className="container">
-            <div id="icon">
+            {/* <div id="icon">
                 {accountSettings.map((icon)=>{
                     return(
                         <li>{icon.icon}</li>
@@ -32,11 +32,14 @@ const AccountSettings=()=>{
                 })
                     
                 }
-            </div>
+            </div> */}
             <div id="account-settings">
                 {accountSettings.map(title=>{
                     return(
+                        <div className="menu">
+                        <i>{title.icon}</i>
                         <li><a href="/">{title.title}</a></li>
+                        </div>
                         
                         
                     )

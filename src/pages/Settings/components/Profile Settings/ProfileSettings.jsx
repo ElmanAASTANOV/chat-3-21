@@ -21,20 +21,23 @@ const ProfileSettings=()=>{
         <div className="profile-settings" >
             <User/>
             <div id="settings">
-                <div className="icons">
+                {/* <div className="icons">
                   {profileSettings.map((icon)=>{
                       return(
                           <li>{icon.icon}</li>
                       )
                   })}
                 
-                </div>
+                </div> */}
                 <div className="title">
                 {profileSettings.map(title=>{
                     return(
+                        <div className="profile-menu">
+                        <i>{title.icon}</i>
                 <li onClick={()=>{
 
                 }}><a href="/">{title.name}</a></li> 
+                </div>
                 )})}
                 </div>
             </div>
