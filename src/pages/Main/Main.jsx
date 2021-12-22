@@ -1,16 +1,15 @@
-
-import { Link, Outlet } from 'react-router-dom';
+import {Outlet, useNavigate } from 'react-router-dom';
+import SideBar from 'components/SideBar';
+import mainPageMenu from 'menus';
+import LogOut from 'menus/LogOut';
 
 
 const Main = () => {
+    const navigate = useNavigate()
     return (
         <div id="main-layout">
             <div className="sidebar">
-                <Link to='/'> Homepage </Link>
-                <Link to='/messages'> Messages </Link>
-                <Link to='/notifications'> Notifications </Link>
-                <Link to='/settings'> Settings </Link>
-                <Link to='/login'> Exit </Link>
+            <SideBar menus = {mainPageMenu} logout = {LogOut} onChangeMenu = {key => navigate(`${key}`)}/>
             </div>
 
             <div className="pages">
@@ -18,6 +17,6 @@ const Main = () => {
             </div>
         </div >
     )
-}
+};
 
 export default Main;

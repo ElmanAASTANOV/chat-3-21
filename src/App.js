@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import AllRoutes from "routing";
 
 function App() {
@@ -11,11 +10,9 @@ function App() {
   // }, [])
 
   return (
-    <Router>
       <div className="App">
         <AllRoutes />
       </div>
-    </Router>
   );
 }
 
