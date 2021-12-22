@@ -18,69 +18,38 @@
 }
 
 .bottom {
-  height: 466px;
-  width: 1070px;
+  height: 520px;
+  width: 800px;
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 26px;
-  position: absolute;
 }
-
-.bottom hr {
-  width: 90%;
-}
-.bottom p {
-  padding-left: 80px;
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: .4px;
-  color: #000000;
+.content{
+  width: 100%;
+  padding: 8px;
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
+
 }
-.top .icon_1 {
-    font-size: 30px;
-    position: absolute;
-    right: 100px;
+ 
+ .content >p{
+  font-size: 12px;
+  padding: 15px;
+  width:90%;
+  margin: auto;
+  border-bottom: 1px solid black;
+  font-weight: bold;
 }
-.top .icon_2 {
-    font-size: 30px;
-    position: absolute;
-    left: 90rem;
-    color: #1A66FF;
+.content i{
+  font-size: 20px;
+  position: absolute;
+  left: 20px;
 }
 
-.bottom p i {
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    position: absolute;
-    left: 30px;
-   
-}
-.bottom .icon_3 {
-    position: absolute;
-    top: 72px;
-}
 
-.bottom .icon_4 {
-    position: absolute;
-    top: 122px;
-}
 
-.bottom .icon_7 {
-    position: absolute;
-    left: 30px;
-    bottom: 65px;
-}
-.bottom .icon_6 {
-    position: absolute;
-    bottom: 115px;
-}   
-
-.bottom .icon_8 {
-    position: absolute;
-    bottom: 15px;
-}

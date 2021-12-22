@@ -1,20 +1,21 @@
 import "./App.css";
-import Main from 'pages/Main';
-import Login from 'pages/Login';
-import { useState } from 'react';
-
+import { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AllRoutes from "routing";
 
 function App() {
-  const [login, setLogin] = useState(false);
+  // const [login, setLogin] = useState(false);
 
   // useEffect(() => {
-    
+
   // }, [])
 
   return (
-    <div className="App">
-      {login ? <Login setLogin = {setLogin}/> : <Main />} 
-    </div>
+    <Router>
+      <div className="App">
+        <AllRoutes />
+      </div>
+    </Router>
   );
 }
 
