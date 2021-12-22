@@ -2,6 +2,13 @@ const express = require('express');
 const app = express();
 var cors = require('cors');
 const data = require("./data");
+var bodyParser = require('body-parser')
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 app.use(cors())
 app.get('/', function (req, res) {
@@ -27,6 +34,17 @@ app.get('/friends', function(req, res) {
 app.get('/notifications', function(req, res) {
     return res.json(data.notifications);
 })
+
+app.post("/login", function(req, res){
+    var result = data.users.find(function(data){
+        return data.username === req.body?.username && data.password === req.body?.password;
+    })
+    if(!result){
+        return res.status(404).send();
+    }
+    delete result.password;
+    return res.status(200).json(result);
+});
 
 app.listen(3003, function(){
     console.log("http://localhost:3003/");

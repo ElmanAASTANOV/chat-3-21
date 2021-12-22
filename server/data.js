@@ -16,10 +16,14 @@ const data = {
     {
       username: "elmanastanov",
       password: "1234",
+      name: "Elman",
+      surname: "Astanov",
     },
     {
       username: "admin",
       password: "1234",
+      name: "Admin",
+      surname: "",
     },
   ],
   groups: [
