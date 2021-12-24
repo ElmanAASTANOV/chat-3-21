@@ -1,3 +1,5 @@
+import { ACTIONS } from "actions/actions";
+
 const initData = {
   groups: [],
   recents: [],
@@ -8,25 +10,25 @@ const initData = {
 
 const reducer = (store = initData, action) => {
   switch (action.type) {
-    case 'setGroups':
+    case ACTIONS.SETGROUPS:
       return {
         ...store,
         groups: action.data
       };
 
-      case 'setRecents':
+      case ACTIONS.SETRECENTS:
       return {
         ...store,
         recents: action.data
       } 
 
-      case 'setFriends':
+      case ACTIONS.SETFRIENDS:
         return {
           ...store,
           friends: action.data
         }
 
-        case 'setRecentCalls':
+        case ACTIONS.SETRECENTCALLS:
       return {
         ...store,
         recentCalls: action.data
