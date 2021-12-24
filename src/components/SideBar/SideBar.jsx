@@ -1,4 +1,8 @@
+import LogOut from 'menus/LogOut';
+import { useNavigate } from 'react-router-dom';
+
 const SideBar = ({ menus =[], onChangeMenu = () =>{}}) => {
+    const navigate = useNavigate()
     return (<aside className="side-bar">
         <header>
           
@@ -16,10 +20,12 @@ const SideBar = ({ menus =[], onChangeMenu = () =>{}}) => {
 
                         </li>
 
-                    )
-                })
+)
+})
 
-            }
+}
+   <LogOut style = {{color:"#BAD1FF", fontSize: "4rem"}} onClick = {() => navigate("/login")}/>
+
         </ul>
     </aside>)
 }
