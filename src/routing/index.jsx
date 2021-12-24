@@ -4,9 +4,22 @@ import Settings from 'pages/Settings';
 import Login from 'pages/Login';
 import Messages from 'pages/Messages';
 import HomePage from 'pages/Home-Page';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import appConfig from 'config';
+import {LS} from "utils"
+
 
 const AllRoutes = () => {
+    const navigate = useNavigate();
+    useEffect(()=>{ 
+    const userData = LS.getItemLocalStorage(appConfig.userData);
+    // console.log(userData);
+    if(!userData){
+        navigate("/Login",{replace:true})
+    }
+
+    },[navigate])
     return (
         <Routes>
             <Route path='/login' element={< Login />} />
