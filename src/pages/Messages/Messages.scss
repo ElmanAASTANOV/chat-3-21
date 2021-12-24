@@ -1,0 +1,135 @@
+:root {
+  --white: #fff;
+}
+
+div.messages-page {
+  height: 100%;
+  background-color: #eaeaea;
+  margin-left: 4.3rem;
+  display: grid;
+  grid-template-areas:
+    "searchBar friends groupCalls"
+    "groups friends groupCalls"
+    "recents friends groupCalls";
+  column-gap: 2.2rem;
+  row-gap: 1.2rem;
+  grid-template-columns: 1.2fr 2fr;
+  grid-template-rows: 5.9rem 0.75fr 1fr;
+
+  & > * {
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  & ::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > .esearchBar {
+    position: relative;
+    grid-area: searchBar;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    & > .esearchIcon {
+      font-size: 3rem;
+    }
+
+    & > input.searchBar {
+      display: inline-block;
+      height: 80%;
+      border: none;
+      font-size: 24px;
+      padding-left: 2rem;
+    }
+
+    & > input.searchBar:focus {
+      outline: none;
+    }
+
+    & > .ethree-dots {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      & > span.edot {
+        position: initial;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        margin: 2px 0;
+        background-color: #1a66ff;
+      }
+    }
+  }
+
+  & > .egroups {
+    position: relative;
+    max-height: 27rem;
+    grid-area: groups;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  & > .erecents {
+    position: relative;
+    grid-area: recents;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  & > .messages {
+    position: relative;
+    grid-area: friends;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 1rem 5rem;
+
+    & .message-content {
+      padding: 2rem 0;
+      margin-bottom: 10rem;
+      overflow-y: scroll;
+
+      & .message-line {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        & .message {
+          font-weight: 500;
+          font-size: 1.6rem;
+          padding: 1rem 2.2rem;
+          border-radius: 1rem;
+        }
+        & .time {
+          font-weight: 500;
+          font-size: 1.2rem;
+          color: rgba(0, 0, 0, 0.25);
+          margin: 0.8rem 0;
+        }
+      }
+      & .left {
+            align-items: flex-start;
+            & .message {
+                  background-color:rgba(0, 0, 0, 0.25);
+              }
+        }
+      & .right {
+          align-items: flex-end;
+          & .message {
+                background-color:#1A66FF;
+                color: #fff;
+            }
+        }
+    }
+  }
+}

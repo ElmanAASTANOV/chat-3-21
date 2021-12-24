@@ -1,0 +1,80 @@
+.messages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 1.6rem 0;
+  border-radius: 0%;
+
+  & .profile-details {
+    display: flex;
+    align-items: center;
+
+    & .image-container {
+      width: 7.5rem;
+      height: 7.5rem;
+      position: relative;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      margin-right: 2rem;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+      & .online-indicator {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        bottom: 0;
+        right: 0.5rem;
+        background-color: #00ff75;
+        border: 0.2rem solid #ffffff;
+        border-radius: 50%;
+        box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25);
+      }
+    }
+    & .profile-title {
+      & p {
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      & small {
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(0, 0, 0, 0.85);
+      }
+    }
+  }
+  & .actions {
+      display: flex;
+      align-items: center;
+    & span {
+      position: static !important;
+      margin: 1.6rem;
+      & .fa {
+        font-size: 2rem;
+        color: #1a66ff;
+      }
+    }
+
+    & .ethree-dots {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin:0 0 0 1.6rem;
+
+
+      & span.edot {
+        position: initial !important;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        margin: 2px 0;
+        background-color: #1a66ff;
+      }
+    }
+  }
+}
