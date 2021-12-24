@@ -67,7 +67,7 @@ const HomePage = () => {
               key={index}
               name={data.user.name}
               surname={data.user.surname}
-              message={data.message.content} l// Kiran message property should not be array or all of them must be array
+              message={data.message.content} // Kiran message property should not be array or all of them must be array
               time={data.message.date}
               status={data.message.status}
               type={data.message.type}

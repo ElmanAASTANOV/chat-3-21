@@ -17,10 +17,10 @@ function Messages() {
 
   useEffect(() => {
     getGroups()
-      .then((res) => dispatch({ type: "setGroups", payload: res }))
+      .then((res) => dispatch({ type: "setGroups", data: res }))
       .catch((err) => console.log(err));
     getRecents()
-      .then((res) => dispatch({ type: "setRecents", payload: res }))
+      .then((res) => dispatch({ type: "setRecents", data: res }))
       .catch((err) => console.log(err));
   }, [dispatch]);
 
@@ -57,7 +57,7 @@ function Messages() {
               key={index}
               name={data.user.name}
               surname={data.user.surname}
-              message={data.message.content} // Kiran message property should not be array or all of them must be array
+              // message={data.message.content} // Kiran message property should not be array or all of them must be array
               time={data.message.date}
               status={data.message.status}
               type={data.message.type}
