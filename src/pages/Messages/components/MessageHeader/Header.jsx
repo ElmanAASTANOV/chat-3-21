@@ -7,7 +7,7 @@ const MessageHeader = ({ profile_photo }) => {
     <div class="messages-header">
       <div class="profile-details">
         <div class="image-container">
-          <img src={img} alt="profile image" />
+          <img src={img} alt="profile" />
           <div class="online-indicator"></div>
         </div>
         <div class="profile-title">
