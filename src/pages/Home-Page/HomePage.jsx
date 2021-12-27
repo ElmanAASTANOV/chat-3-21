@@ -17,8 +17,6 @@ const HomePage = () => {
   const friends = useSelector(selectors.getFriends);
   const recentCalls = useSelector(selectors.getRecentCalls);
 
-  console.log(groups.data)
-
   useEffect(() => {
     getGroups()
       .then(res => dispatch(actions.setGroups(res)))
@@ -34,7 +32,6 @@ const HomePage = () => {
       .catch(err => console.log(err))
   }, [dispatch])
 
-  useSelector(store => console.log(store))
 
   return (
     <div className="ehomePage">
