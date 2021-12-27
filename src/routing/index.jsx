@@ -2,6 +2,9 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from 'pages/Main';
 import Login from 'pages/Login';
+
+
+
 const HomePage = React.lazy(() => import('pages/Home-Page'));
 const Messages = React.lazy(() => import('pages/Messages'));
 const Settings = React.lazy(() => import('pages/Settings'));
