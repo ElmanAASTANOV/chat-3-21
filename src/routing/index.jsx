@@ -17,7 +17,7 @@ const AllRoutes = () => {
         if(!login){
             navigate("/login", {replace:true})
         }
-       console.log(appConfig.login);
+    //    console.log(login);
     },[navigate])
     return (
         <Routes>
