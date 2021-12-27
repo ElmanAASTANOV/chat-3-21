@@ -7,29 +7,30 @@ import { getRecentCalls } from 'api/recentCalls';
 import { useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { useSelector, useDispatch } from 'react-redux';
-
+import * as selectors from 'store/selectors/selectors';
+import * as actions from 'store/actions/actions';
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const groups = useSelector(store => store.groups);
-  const recents = useSelector(store => store.recents);
-  const friends = useSelector(store => store.friends);
-  const recentCalls = useSelector(store => store.recentCalls);
+  const groups = useSelector(selectors.getGroups);
+  const recents = useSelector(selectors.getRecents);
+  const friends = useSelector(selectors.getFriends);
+  const recentCalls = useSelector(selectors.getRecentCalls);
 
   console.log(groups.data)
 
   useEffect(() => {
     getGroups()
-      .then(res => dispatch({ type: "setGroups", data: res }))
+      .then(res => dispatch(actions.setGroups(res)))
       .catch(err => console.log(err))
     getRecents()
-      .then(res => dispatch({ type: "setRecents", data: res }))
+      .then(res => dispatch(actions.setRecents(res)))
       .catch(err => console.log(err))
     getFriends()
-      .then(res => dispatch({type: "setFriends", data: res }))
+      .then(res => dispatch(actions.setFriends(res)))
       .catch(err => console.log(err))
     getRecentCalls()
-      .then(res => dispatch({type: "setRecentCalls", data: res }))
+      .then(res => dispatch(actions.setRecentCalls(res)))
       .catch(err => console.log(err))
   }, [dispatch])
 

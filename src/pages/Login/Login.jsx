@@ -22,9 +22,10 @@ const Login = () => {
           console.log(username, password);
           setLoading(true);
           LogIn({ username, password })
-            .then(res => {console.log(res)
-            LS.setItemLocalStorage(appConfig.userData,JSON.stringify(res.data))})
+            .then(res => {
+            LS.setItemLocalStorage(appConfig.userData,JSON.stringify(res.data))
             navigate("/", {replace:true})
+          })
             .catch(err=>alert("xeta bash verdi"))
             .finally(() => { setLoading(false)});
         }}

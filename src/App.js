@@ -1,7 +1,7 @@
 import "./App.css";
 import AllRoutes from "routing";
 import { Provider } from "react-redux";
-import store from "store";
+import store from "store/store";
 
 
 

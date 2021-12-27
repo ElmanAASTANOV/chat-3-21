@@ -1,7 +1,6 @@
 import React from "react";
 import { getGroups } from "api/groups";
 import { getRecents } from "api/recents";
-// import { getMessages } from "api/messages";
 import { useSelector, useDispatch } from "react-redux";
 import Table, { ContactItem } from "./components/Table";
 import Topbar from "./components/Topbar";
