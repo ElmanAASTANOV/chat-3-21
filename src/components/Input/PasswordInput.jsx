@@ -1,4 +1,4 @@
-const PasswordInput = () =>{
-    return (<input id="password" type="password" placeholder="Password"/>)
+const PasswordInput = ({name}) =>{
+    return (<input id="password" name={name} type="password" placeholder="Password"/>)
 }
 export default PasswordInput

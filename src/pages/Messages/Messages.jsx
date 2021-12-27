@@ -7,7 +7,7 @@ import Table, { ContactItem } from "./components/Table";
 import Topbar from "./components/Topbar";
 import MessageHeader from "./components/MessageHeader";
 import MessageFooter from "./components/MessageFooter";
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Messages() {
