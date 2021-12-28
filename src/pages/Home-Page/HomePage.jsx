@@ -32,7 +32,6 @@ const HomePage = () => {
       .catch(err => console.log(err))
   }, [dispatch])
 
-
   return (
     <div className="ehomePage">
       <div className="esearchBar">
@@ -68,9 +67,13 @@ const HomePage = () => {
               message={
                 data.message.content || data.message[data.message.length-1].content
               }
-              time={data.message.date}
-              status={data.message.status}
-              type={data.message.type}
+              unreadMessageCount = {
+                !data.message.content &&
+                data.message.filter(obj => obj.type === 2).length
+              }
+              time={data.message.date || data.message[data.message.length-1].date}
+              status={data.message.status || data.message[data.message.length-1].status}
+              type={data.message.type || data.message[data.message.length-1].type}
             />)
           }
         </Table>

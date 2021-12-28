@@ -6,7 +6,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import img from 'pages/Home-Page/profile-picture/profileImage';
 
-const ContactItem = ({name, surname, message, time, callType, messageType, type, status }) => {
+const ContactItem = ({name, surname, message, time, callType, messageType, type, status, unreadMessageCount }) => {
 
   return (
     <div className="econtact" onClick={(e) => {console.log(name)}}>
@@ -29,7 +29,7 @@ const ContactItem = ({name, surname, message, time, callType, messageType, type,
         {(type === 1 && status === 1) && < DoneIcon fontSize='' className="emessage-sent" />}
         {(type === 1 && status === 2) && < DoneAllIcon fontSize='' className="emessage-delivered" />}
         {(type === 1 && status === 3) && < DoneAllIcon fontSize='' className="emessage-seen" />}
-        {type === null && <div className='eunread'><span>{}</span></div>}
+        {type === 2 && <div className='eunreadMessageCount'><span>{unreadMessageCount}</span></div>}
       </div>
     </div>
   )
