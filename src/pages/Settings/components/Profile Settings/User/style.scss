@@ -32,3 +32,23 @@ span{
     bottom:25px;
     font-size: 20px;
 }
+
+@media screen and (max-width:900px) {
+    #profile{
+     display: flex;
+     width: 100%;
+     flex-direction: column;
+     height: 200px;
+     position: relative;
+
+     img{
+         position: absolute;
+         top: 60px;
+     }
+
+     span{
+         position: relative;
+     }
+    }
+    
+}
