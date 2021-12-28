@@ -16,24 +16,30 @@ const reducer = (store = initData, action) => {
         groups: action.data
       };
 
-      case ACTION_TYPES.SETRECENTS:
+    case ACTION_TYPES.SETRECENTS:
       return {
         ...store,
         recents: action.data
-      } 
+      }
 
-      case ACTION_TYPES.SETFRIENDS:
-        return {
-          ...store,
-          friends: action.data
-        }
+    case ACTION_TYPES.SETFRIENDS:
+      return {
+        ...store,
+        friends: action.data
+      }
 
-        case ACTION_TYPES.SETRECENTCALLS:
+    case ACTION_TYPES.SETRECENTCALLS:
       return {
         ...store,
         recentCalls: action.data
       }
-  
+
+    case ACTION_TYPES.SETSEARCHRESULT:
+      return {
+        ...store,
+        searchResult: action.data
+      }
+
     default:
       return store;
   }

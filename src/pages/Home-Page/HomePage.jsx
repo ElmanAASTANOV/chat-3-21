@@ -1,3 +1,4 @@
+import SearchBar from './components/SearchBar';
 import Table, { ContactItem } from './components/Table';
 import Topbar from './components/Topbar';
 import { getGroups } from 'api/groups';
@@ -5,7 +6,6 @@ import { getRecents } from 'api/recents';
 import { getFriends } from 'api/friends';
 import { getRecentCalls } from 'api/recentCalls';
 import { useEffect } from 'react';
-import SearchIcon from '@mui/icons-material/Search';
 import { useSelector, useDispatch } from 'react-redux';
 import * as selectors from 'store/selectors/selectors';
 import * as actions from 'store/actions/actions';
@@ -16,6 +16,7 @@ const HomePage = () => {
   const recents = useSelector(selectors.getRecents);
   const friends = useSelector(selectors.getFriends);
   const recentCalls = useSelector(selectors.getRecentCalls);
+  const searchResult = useSelector(selectors.getSearchResult);
 
   useEffect(() => {
     getGroups()
@@ -35,19 +36,16 @@ const HomePage = () => {
   return (
     <div className="ehomePage">
       <div className="esearchBar">
-        <SearchIcon fontSize='' className='esearchIcon' />
-        <input className='searchBar' type="text" placeholder='Search' />
-        <div className="ethree-dots">
-          <span className="edot"></span>
-          <span className="edot"></span>
-          <span className="edot"></span>
-        </div>
+        <SearchBar/>
       </div>
 
       <div className="egroups">
         <Topbar heading='Groups' />
         <Table>
-          {
+          { searchResult?.map((data, index) => <ContactItem
+              key={index}
+              name={data.name}
+              message={data.lastMessage} />) ||
             groups.map((data, index) => <ContactItem
               key={index}
               name={data.name}
