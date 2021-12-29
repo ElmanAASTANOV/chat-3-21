@@ -15,6 +15,12 @@
             font-size: 4rem;
             cursor: pointer;
 
+            &.active {
+                color: #000;
+                background: blue;
+                border-radius: 4px;
+            }
+
         }
 
         .logout{
