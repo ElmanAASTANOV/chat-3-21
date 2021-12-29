@@ -12,6 +12,7 @@
   align-items: center;
   padding: 1rem 2rem;
   border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
   .search-icon{
     font-size: 25px;
@@ -23,6 +24,10 @@
     font-size: 24px;
     padding-left: 2rem;
     border-radius: white;
+
+  }
+  .search:focus{
+    outline: none;
   }
 
   .three-dots{
@@ -45,6 +50,7 @@
 .content{
   width: 100%;
   height: 100%;
+  margin-top: 2rem;
   overflow-y: scroll;
   border-radius: 15px;
   position: relative;

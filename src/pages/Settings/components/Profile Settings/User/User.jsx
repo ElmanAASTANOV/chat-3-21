@@ -18,8 +18,8 @@ const User=()=>{
              }
             </h5>
             </div>
-            <p>Stay home stay safe</p>
             </div>
+            <p>Stay home stay safe</p>
             </div>
     )
 }
