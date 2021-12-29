@@ -13,7 +13,7 @@ const Notifications = React.lazy(() => import('pages/Notifications'));
 const AllRoutes = () => {
     const navigate=useNavigate()
     useEffect(()=>{
-      const login = LS.getItemLocalStorage(appConfig.login)
+      const login = LS.getItemLocalStorage(appConfig.userData)
         if(!login){
             navigate("/login", {replace:true})
         }

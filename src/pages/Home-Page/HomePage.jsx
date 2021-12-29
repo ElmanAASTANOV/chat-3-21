@@ -17,7 +17,6 @@ const HomePage = () => {
   const friends = useSelector(selectors.getFriends);
   const recentCalls = useSelector(selectors.getRecentCalls);
   const searchResult = useSelector(selectors.getSearchResult);
-
   useEffect(() => {
     getGroups()
       .then(res => dispatch(actions.setGroups(res)))
