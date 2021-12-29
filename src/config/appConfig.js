@@ -1,5 +1,5 @@
 const appConfig = {
-    login: "login"
+    userData: "userData"
   };
   
   export default appConfig;

@@ -22,7 +22,7 @@ const Login = () => {
           setLoading(true);
           LogIn({ username, password })
             .then((data) => {
-              LS.setItemLocalStorage(appConfig.login, JSON.stringify(data));
+              LS.setItemLocalStorage(appConfig.userData, JSON.stringify(data));
               navigate("/home", { replace: true });
             })
             .catch((err) => alert("Xeta bas verdi"))
