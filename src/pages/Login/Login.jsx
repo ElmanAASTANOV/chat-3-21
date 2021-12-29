@@ -21,8 +21,8 @@ const Login = () => {
           const password = elements["password"].value;
           setLoading(true);
           LogIn({ username, password })
-          .then(res => {
-            LS.setItemLocalStorage(appConfig.login, JSON.stringify(res.data))
+          .then(data => {
+            LS.setItemLocalStorage(appConfig.login, JSON.stringify(data))
             navigate("/", { replace: true });
         })
         .catch(err => alert("Xeta bas verdi"))
