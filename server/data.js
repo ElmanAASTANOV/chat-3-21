@@ -29,9 +29,21 @@ const data = {
       username: "lamanmuradzada",
       password: "12345",
       name: "Ləman",
-      surname: "Muradzadə"
+      surname: "Muradzadə",
     },
-    
+
+    {
+      username: "xeyyamomar",
+      password: "1234",
+      name: "Xeyyam",
+      surname: "Omar",
+    },
+    {
+      username: "elvinmammadli",
+      password: "1234",
+      name: "Elvin",
+      surname: "Mammadli",
+    },
   ],
   groups: [
     {

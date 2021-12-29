@@ -1,7 +1,7 @@
 .account-settings{
-    width: 40%;
-    height: 90%;
-    margin: auto auto;
+    width: 45%;
+    height: 100%;
+    // margin: auto auto;
     border: 1px solid rgb(236, 226, 226);
     background-color: white;
     border-radius: 1.5rem;
@@ -21,7 +21,6 @@
     .container{
         display: flex;
         position: relative;
-        top: 40px;
         left: 30px;
        
     }
@@ -41,16 +40,19 @@
     .menu > i{
         position: absolute;
         left: -25px;
-        font-size:18px ;
+        top: 5px;
+        font-size:25px ;
 
     }
     .menu li{
         position: relative;
         left: 10px;
+        margin: 5px;
     }
     li >a{
         text-decoration: none;
         color: black;
+        font-size: 20px;
     }
 }
 
@@ -58,7 +60,7 @@
     .account-settings{
         padding: 20px;
         overflow:hidden;
-        overflow:scroll;
+        overflow-y:scroll;
     }
     
 }
