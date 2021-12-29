@@ -75,6 +75,8 @@ div.messages-page {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    min-width: 30.5rem;
+    padding: 0 2rem;
   }
 
   & > .erecents {
@@ -84,6 +86,8 @@ div.messages-page {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    min-width: 30.5rem;
+    padding: 0 2rem;
   }
 
   & > .messages {

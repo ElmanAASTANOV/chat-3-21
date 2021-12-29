@@ -2,66 +2,71 @@ import React from "react";
 import { getGroups } from "api/groups";
 import { getRecents } from "api/recents";
 import { useSelector, useDispatch } from "react-redux";
-import Table, { ContactItem } from "./components/Table";
-import Topbar from "./components/Topbar";
+import SearchBar from 'components/SearchBar';
+import Table, { ContactItem } from 'components/Table';
+import Topbar from "components/Topbar";
 import MessageHeader from "./components/MessageHeader";
 import MessageFooter from "./components/MessageFooter";
-import {  useEffect } from "react";
-import SearchIcon from "@mui/icons-material/Search";
+import { useEffect } from "react";
+import * as selectors from 'store/selectors/selectors';
+import * as actions from 'store/actions/actions';
 
 function Messages() {
   const dispatch = useDispatch();
-  const groups = useSelector((store) => store.groups);
-  const recents = useSelector((store) => store.recents);
+  const groups = useSelector(selectors.getGroups);
+  const recents = useSelector(selectors.getRecents);
+  const searchResult = useSelector(selectors.getSearchResult);
 
   useEffect(() => {
     getGroups()
-      .then((res) => dispatch({ type: "setGroups", data: res }))
-      .catch((err) => console.log(err));
+      .then(res => dispatch(actions.setGroups(res)))
+      .catch(err => console.log(err));
     getRecents()
-      .then((res) => dispatch({ type: "setRecents", data: res }))
-      .catch((err) => console.log(err));
+      .then(res => dispatch(actions.setRecents(res)))
+      .catch(err => console.log(err));
   }, [dispatch]);
 
   return (
     <div className="messages-page">
       <div className="esearchBar">
-        <SearchIcon fontSize="" className="esearchIcon" />
-        <input className="searchBar" type="text" placeholder="Search" />
-        <div className="ethree-dots">
-          <span className="edot"></span>
-          <span className="edot"></span>
-          <span className="edot"></span>
-        </div>
+        <SearchBar/>
       </div>
 
       <div className="egroups">
-        <Topbar heading="Groups" />
+        <Topbar heading='Groups' />
         <Table>
-          {groups.map((data, index) => (
-            <ContactItem
+          { searchResult?.map((data, index) => <ContactItem
               key={index}
               name={data.name}
-              message={data.lastMessage}
-            />
-          ))}
+              message={data.lastMessage} />) ||
+            groups.map((data, index) => <ContactItem
+              key={index}
+              name={data.name}
+              message={data.lastMessage} />)
+          }
         </Table>
       </div>
 
       <div className="erecents">
-        <Topbar heading="Recents" />
+        <Topbar heading='Recents' />
         <Table>
-          {recents.map((data, index) => (
-            <ContactItem
+          {
+            recents.map((data, index) => <ContactItem
               key={index}
               name={data.user.name}
               surname={data.user.surname}
-              // message={data.message.content} // Kiran message property should not be array or all of them must be array
-              time={data.message.date}
-              status={data.message.status}
-              type={data.message.type}
-            />
-          ))}
+              message={
+                data.message.content || data.message[data.message.length-1].content
+              }
+              unreadMessageCount = {
+                !data.message.content &&
+                data.message.filter(obj => obj.type === 2).length
+              }
+              time={data.message.date || data.message[data.message.length-1].date}
+              status={data.message.status || data.message[data.message.length-1].status}
+              type={data.message.type || data.message[data.message.length-1].type}
+            />)
+          }
         </Table>
       </div>
 
