@@ -21,18 +21,11 @@ const ProfileSettings=()=>{
         <div className="profile-settings" >
             <User/>
             <div id="settings">
-                {/* <div className="icons">
-                  {profileSettings.map((icon)=>{
-                      return(
-                          <li>{icon.icon}</li>
-                      )
-                  })}
-                
-                </div> */}
+            
                 <div className="title">
-                {profileSettings.map(title=>{
+                {profileSettings.map((title,index)=>{
                     return(
-                        <div className="profile-menu">
+                        <div className="profile-menu" key={index}>
                         <i>{title.icon}</i>
                 <li onClick={()=>{
 

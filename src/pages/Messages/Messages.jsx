@@ -1,13 +1,12 @@
 import React from "react";
 import { getGroups } from "api/groups";
 import { getRecents } from "api/recents";
-// import { getMessages } from "api/messages";
 import { useSelector, useDispatch } from "react-redux";
 import Table, { ContactItem } from "./components/Table";
 import Topbar from "./components/Topbar";
 import MessageHeader from "./components/MessageHeader";
 import MessageFooter from "./components/MessageFooter";
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Messages() {
