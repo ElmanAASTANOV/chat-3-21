@@ -1,5 +1,5 @@
-import SearchBar from './components/SearchBar';
-import Table, { ContactItem } from './components/Table';
+import SearchBar from '../../components/SearchBar';
+import Table, { ContactItem } from '../../components/Table';
 import Topbar from './components/Topbar';
 import { getGroups } from 'api/groups';
 import { getRecents } from 'api/recents';
