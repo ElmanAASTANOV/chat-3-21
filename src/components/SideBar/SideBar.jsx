@@ -1,13 +1,13 @@
 import LogOut from 'menus/LogOut';
 import { useNavigate } from 'react-router-dom';
+import img from 'pages/Home-Page/profile-picture/profileImage'
 
 const SideBar = ({ menus = [], onChangeMenu = () => { } }) => {
     const navigate = useNavigate()
     return (<aside className="side-bar">
-        <header>
-
-        </header>
-
+        <div id='profile-picture'>
+            <img src={img} alt="" />
+        </div>
         <ul>
             {
                 menus?.map((menu) => {
