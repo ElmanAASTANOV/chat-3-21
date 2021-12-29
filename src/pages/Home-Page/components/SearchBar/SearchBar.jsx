@@ -9,7 +9,7 @@ import * as actions from 'store/actions/actions'
 function SearchBar() {
 
   const dispatch = useDispatch();
-  const [input, setInput] = useState([]);
+  const [input, setInput] = useState('');
   const groups = useSelector(selectors.getGroups);
 
   const searchFunction = (array, string) => {
