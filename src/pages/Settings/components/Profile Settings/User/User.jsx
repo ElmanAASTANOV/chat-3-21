@@ -4,7 +4,7 @@ import {AiOutlineQrcode} from "react-icons/ai"
 import { LS} from "utils"
 import "./style.scss"
 const User=()=>{
-    const login = JSON.stringify((LS.getItemLocalStorage(appConfig.login) || "{}"))
+    const login = JSON.parse((LS.getItemLocalStorage(appConfig.userData) || "{}"))
     return(
         <div id="profile">
             <h3>Profile Settings</h3>
