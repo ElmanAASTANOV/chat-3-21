@@ -18,24 +18,7 @@
         top: 10px;
     }
    
-    // #settings > .icons {
-    //     // margin: 10px; 
-    //      padding: 5px; 
-    //     font-size: 20px;
-    //     position: relative;
-    //     top: 30px;
-    //     left: 5px;
-    //     display: flex;
-    //     flex-direction: column;
-    //     list-style: none;
-      
-    // }
-    // .icons> li{
-    //     margin: 6px;
-    //     position: relative;
-    //     top: 1px;
-    //     left: 5px;
-    // }
+
     
     #settings > .title {
     
@@ -47,9 +30,7 @@
         font-weight: 500;
        
     }
-    // .profile-menu{
-        
-    // }
+  
     .profile-menu > i{
         position: absolute;
         left: -15px;
@@ -64,4 +45,13 @@
         text-decoration: none;
         color: black;
     }
+}
+
+@media screen and (max-width:900px) {
+    .profile-settings{
+        padding: 20px;
+        overflow:hidden;
+        overflow:scroll;
+    }
+    
 }

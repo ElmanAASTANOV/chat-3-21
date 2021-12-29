@@ -23,21 +23,13 @@
         position: relative;
         top: 40px;
         left: 30px;
-        // #icon{
-        //     list-style: none;
-        //     font-size: 20px;
-        //     li{
-        //         margin: 8px;
-        //     }
-        // }
+       
     }
 
     .container > #account-settings {
     
         list-style: none;
         font-size: 15px;
-        // position: relative;
-        // left:40px;
         font-weight: 500;
        
     }
@@ -60,4 +52,13 @@
         text-decoration: none;
         color: black;
     }
+}
+
+@media screen and (max-width:900px) {
+    .account-settings{
+        padding: 20px;
+        overflow:hidden;
+        overflow:scroll;
+    }
+    
 }
