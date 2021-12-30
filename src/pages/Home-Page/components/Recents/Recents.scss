@@ -1,0 +1,12 @@
+.erecents {
+  grid-area: recents;
+  min-width: 30.5rem;
+  padding: 0 2rem;
+  display: flex;
+  background-color: var(--white);
+  flex-direction: column;
+  overflow: auto;
+  border-bottom: 1rem solid white;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

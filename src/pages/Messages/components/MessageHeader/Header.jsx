@@ -4,18 +4,18 @@ import VideocamIcon from '@mui/icons-material/Videocam';
 
 const MessageHeader = ({ profile_photo }) => {
   return (
-    <div class="messages-header">
-      <div class="profile-details">
-        <div class="image-container">
+    <div className="messages-header">
+      <div className="profile-details">
+        <div className="image-container">
           <img src={img} alt="pic" />
-          <div class="online-indicator"></div>
+          <div className="online-indicator"></div>
         </div>
-        <div class="profile-title">
+        <div className="profile-title">
           <p>Swathi</p>
           <small>Online</small>
         </div>
       </div>
-      <div class="actions">
+      <div className="actions">
         <span><CallIcon className="fa"/></span>
         <span><VideocamIcon className="fa" /></span>
         <div className="ethree-dots">
