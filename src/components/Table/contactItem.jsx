@@ -6,11 +6,12 @@ import DoneIcon from '@mui/icons-material/Done';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import img from 'pages/Home-Page/profile-picture/profileImage';
 
-const ContactItem = ({name, surname, message, time, callType, messageType, type, status, unreadMessageCount }) => {
+const ContactItem = ({name, surname, message, time, callType, messageType, type, status, onlineStatus, unreadMessageCount }) => {
 
   return (
     <div className="econtact" onClick={(e) => {console.log(name)}}>
       <div className="eleft">
+      {onlineStatus && <div className="online-status"></div>}
         <img src={img} className='eprofile-picture' alt=''/>
         <div className="ename-message">
           <div className="ename">{name} {surname}</div>
@@ -30,6 +31,7 @@ const ContactItem = ({name, surname, message, time, callType, messageType, type,
         {(type === 1 && status === 2) && < DoneAllIcon fontSize='' className="emessage-delivered" />}
         {(type === 1 && status === 3) && < DoneAllIcon fontSize='' className="emessage-seen" />}
         {type === 2 && <div className='eunreadMessageCount'><span>{unreadMessageCount}</span></div>}
+        
       </div>
     </div>
   )

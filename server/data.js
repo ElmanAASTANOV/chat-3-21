@@ -88,7 +88,7 @@ const data = {
       },
       message: [
         {
-          content: "Hi",
+          content: "Hi...",
           date: "Yesterday, 6:22pm",
           status: messageStatus.read,
           type: messageType.recieve,
@@ -155,7 +155,7 @@ const data = {
       },
       message: [
         {
-          content: "Hi",
+          content: "Hi...",
           date: "Yesterday, 6:22pm",
           status: messageStatus.read,
           type: messageType.recieve,

@@ -27,7 +27,7 @@ function Groups() {
               name={data.user.name}
               surname={data.user.surname}
               message={
-                data.message.content || data.message[data.message.length - 1].content
+                data.message.content || data.message[0].content
               }
               unreadMessageCount={
                 !data.message.content &&

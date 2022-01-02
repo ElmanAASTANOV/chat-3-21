@@ -25,7 +25,8 @@ function Friends() {
           friends.map((data, index) => <ContactItem
             key={index}
             name={data.user.name}
-            message={data.message.content}
+            message={data.message.content || data.message[0].content}
+            onlineStatus = {data.isOnline}
             time={data.message.date} />)
         }
       </Table>
