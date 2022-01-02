@@ -8,4 +8,31 @@
   border-bottom: 1rem solid white;
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  & > .econtact-list {
+    & > .econtact {
+      & > .eleft {
+        & > .eprofile-picture {
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+
+        & .ename-message {
+          & > .ename {
+            font-size: 1.3rem;
+          }
+
+          & > .emessage {
+            font-size: 11px;
+          }
+        }
+      }
+
+      & > .eright {
+        & > .etime {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
