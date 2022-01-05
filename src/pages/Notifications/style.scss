@@ -11,17 +11,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-radius: 20px;
+  border-radius: 2rem;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
   .search-icon{
-    font-size: 25px;
+    font-size: 2.5rem;
   }
 
   .search{
     width: 100%;
     border:none;
-    font-size: 24px;
+    font-size: 2.4rem;
     padding-left: 2rem;
     border-radius: white;
 
@@ -37,9 +37,9 @@
     justify-content: space-evenly;
     .dot{
       position: initial;
-      width: 4px;
-      height: 4px;
-      margin: 2px 0;
+      width: 0.4rem;
+      height: 0.4rem;
+      margin: 0.2rem 0;
       background-color: #1A66FF;
     }
   }
@@ -52,19 +52,18 @@
   height: 100%;
   margin-top: 2rem;
   overflow-y: scroll;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: white;
   
 
 }
  
  #content >p{
-  font-size: 12px;
-  padding: 15px;
+  font-size: 1.2rem;
+  padding: 1.5rem;
   width:90%;
   margin: auto;
   border-bottom: 1px solid black;
@@ -72,14 +71,14 @@
 }
 
 #content i{
-  font-size: 20px;
+  font-size: 2rem;
   position: absolute;
-  left: 20px;
+  left: 2rem;
 }
 
-@media  screen and (max-width:900px) {
+@media  screen and (max-width:90rem) {
   .content{
-    padding: 30px;
+    padding: 3rem;
     overflow: hidden;
     overflow: scroll;
   }
