@@ -1,7 +1,7 @@
 .account-settings{
-    width: 40%;
-    height: 90%;
-    margin: auto auto;
+    width: 45%;
+    height: 100%;
+    // margin: auto auto;
     border: 1px solid rgb(236, 226, 226);
     background-color: white;
     border-radius: 1.5rem;
@@ -21,23 +21,14 @@
     .container{
         display: flex;
         position: relative;
-        top: 40px;
         left: 30px;
-        // #icon{
-        //     list-style: none;
-        //     font-size: 20px;
-        //     li{
-        //         margin: 8px;
-        //     }
-        // }
+       
     }
 
     .container > #account-settings {
     
         list-style: none;
         font-size: 15px;
-        // position: relative;
-        // left:40px;
         font-weight: 500;
        
     }
@@ -49,15 +40,27 @@
     .menu > i{
         position: absolute;
         left: -25px;
-        font-size:18px ;
+        top: 5px;
+        font-size:25px ;
 
     }
     .menu li{
         position: relative;
         left: 10px;
+        margin: 5px;
     }
     li >a{
         text-decoration: none;
         color: black;
+        font-size: 20px;
     }
+}
+
+@media screen and (max-width:900px) {
+    .account-settings{
+        padding: 20px;
+        overflow:hidden;
+        overflow-y:scroll;
+    }
+    
 }

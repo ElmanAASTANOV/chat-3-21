@@ -7,11 +7,10 @@ div.ehomePage {
   background-color: #eaeaea;
   margin-left: 4.3rem;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "searchBar friends groupCalls"
     "groups friends groupCalls"
-    "recents friends groupCalls"
-    ;
+    "recents friends groupCalls";
   column-gap: 2.2rem;
   row-gap: 1.2rem;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -25,7 +24,7 @@ div.ehomePage {
   & ::-webkit-scrollbar {
     display: none;
   }
-  
+
   & > .esearchBar {
     position: relative;
     grid-area: searchBar;
@@ -33,41 +32,8 @@ div.ehomePage {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
-
-    & > .esearchIcon {
-      font-size: 3rem;
-    }
-    
-    & > input.searchBar {
-      display: inline-block;
-      height: 80%;
-      border: none;
-      font-size: 24px;
-      padding-left: 2rem;
-    }
-
-    & > input.searchBar:focus {
-      outline: none;
-    }
-
-    & > .ethree-dots {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    
-      & > span.edot {
-        position: initial;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        margin: 2px 0;
-        background-color: #1A66FF;
-      }
-    }
   }
-  
+
   & > .egroups {
     position: relative;
     max-height: 27rem;
@@ -77,7 +43,7 @@ div.ehomePage {
     flex-direction: column;
     overflow: auto;
   }
-  
+
   & > .erecents {
     position: relative;
     grid-area: recents;
@@ -86,7 +52,7 @@ div.ehomePage {
     flex-direction: column;
     overflow: auto;
   }
-  
+
   & > .efriends {
     position: relative;
     grid-area: friends;
@@ -95,7 +61,7 @@ div.ehomePage {
     flex-direction: column;
     overflow: auto;
   }
-  
+
   & > .erecentCalls {
     position: relative;
     grid-area: groupCalls;
@@ -103,5 +69,14 @@ div.ehomePage {
     display: flex;
     flex-direction: column;
     overflow: auto;
+  }
+
+  & .esearchBar,
+  .erecents,
+  .egroups,
+  .efriends,
+  .erecentCalls {
+    min-width: 30.5rem;
+    padding: 0 2rem;
   }
 }

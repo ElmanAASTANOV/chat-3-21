@@ -1,43 +1,68 @@
-#not {
-  margin: 0;
-  padding: 0;
+.notifications{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 
-#not .top {
-  height: 5.9rem;
-  background-color: white;
+.search-bar{
+  position: relative;
+  background-color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
   border-radius: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  .search-icon{
+    font-size: 25px;
+  }
+
+  .search{
+    width: 100%;
+    border:none;
+    font-size: 24px;
+    padding-left: 2rem;
+    border-radius: white;
+
+  }
+  .search:focus{
+    outline: none;
+  }
+
+  .three-dots{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .dot{
+      position: initial;
+      width: 4px;
+      height: 4px;
+      margin: 2px 0;
+      background-color: #1A66FF;
+    }
+  }
+
 }
 
-#not .top p {
-  font-size: 2rem;
-  position: absolute;
-  margin: 15px 100px;
-  color: #3d3d3d;
-}
 
-.bottom {
-  height: 520px;
-  width: 100%;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 26px;
-}
 .content{
   width: 100%;
-  padding: 8px;
+  height: 100%;
+  margin-top: 2rem;
+  overflow-y: scroll;
+  border-radius: 15px;
   position: relative;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: white;
   
 
 }
  
- .content >p{
+ #content >p{
   font-size: 12px;
   padding: 15px;
   width:90%;
@@ -45,11 +70,17 @@
   border-bottom: 1px solid black;
   font-weight: bold;
 }
-.content i{
+
+#content i{
   font-size: 20px;
   position: absolute;
   left: 20px;
 }
 
-
-
+@media  screen and (max-width:900px) {
+  .content{
+    padding: 30px;
+    overflow: hidden;
+    overflow: scroll;
+  }
+}

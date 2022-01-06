@@ -35,15 +35,21 @@ app.get('/notifications', function(req, res) {
     return res.json(data.notifications);
 })
 
+app.get('/messages', function(req, res) {
+    return res.json(data.messages);
+})
+
 app.post("/login", function(req, res){
+
     var result = data.users.find(function(data){
         return data.username === req.body?.username && data.password === req.body?.password;
     })
     if(!result){
         return res.status(404).send();
     }
-    delete result.password;
-    return res.status(200).json(result);
+    let resultCopy= {...result}
+    delete resultCopy.password;
+    return res.status(200).json(resultCopy);
 });
 
 app.listen(3003, function(){

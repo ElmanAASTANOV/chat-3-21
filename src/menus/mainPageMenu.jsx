@@ -7,7 +7,7 @@ const mainPageMenu = [
     {icon:<AiOutlineHome/>, key:"home"},
     {icon:<FaCommentDots/>, key:"messages"},
     {icon:<FaRegBell/>, key:"notifications"},
-    {icon:<AiOutlineSetting/>, key:"Settings"},
+    {icon:<AiOutlineSetting/>, key:"settings"},
 
 ]
 export default mainPageMenu;
