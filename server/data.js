@@ -267,8 +267,33 @@ const data = {
       date: "Today, 2:02pm"
     },
     {
-      data: "Sagol",
+      data: "Salam salam",
       type: messageType.send,
+      date: "Today, 2:02pm"
+    },
+    {
+      data: "Necəsən",
+      type: messageType.recieve,
+      date: "Today, 2:02pm"
+    },
+    {
+      data: "Dərsə gələcəksən axşam",
+      type: messageType.recieve,
+      date: "Today, 2:02pm"
+    },
+    {
+      data: "Əlbəttə",
+      type: messageType.send,
+      date: "Today, 2:02pm"
+    },
+    {
+      data: "Kitabları da gətirəcəm",
+      type: messageType.send,
+      date: "Today, 2:02pm"
+    },
+    {
+      data: "Onda axşam görüşərik",
+      type: messageType.recieve,
       date: "Today, 2:02pm"
     },
   ]

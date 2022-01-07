@@ -3,6 +3,7 @@ import SearchBar from "components/SearchBar";
 import Table, { ContactItem } from "components/Table";
 import Topbar from "components/Topbar";
 import MessageHeader from "./components/MessageHeader";
+import MessageText from "./components/MessageText";
 import MessageFooter from "./components/MessageFooter";
 import { useState, useEffect } from "react";
 import { getMessages } from "api/messages";
@@ -36,14 +37,9 @@ function Messages() {
       <div className="messages">
         <MessageHeader />
         <div className="message-content">
-          <div className="message-line left">
-            <p className="message">Hey Elvin !</p>
-            <small className="time">Today, 2:01pm</small>
-          </div>
-          <div className="message-line right">
-            <p className="message">Hello...</p>
-            <small className="time">Today, 2:12pm</small>
-          </div>
+          {messages.map((message) => (
+            <MessageText content={message.data} time={message.date} type={message.type} />
+          ))}
         </div>
         <MessageFooter />
       </div>

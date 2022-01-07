@@ -91,49 +91,17 @@ div.messages-page {
   }
 
   & > .messages {
-    position: relative;
     grid-area: friends;
     background-color: var(--white);
     display: flex;
     flex-direction: column;
-    overflow: auto;
     padding: 1rem 5rem;
 
     & .message-content {
       padding: 2rem 0;
-      margin-bottom: 10rem;
       overflow-y: scroll;
+      flex-grow: 1;
 
-      & .message-line {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        & .message {
-          font-weight: 500;
-          font-size: 1.6rem;
-          padding: 1rem 2.2rem;
-          border-radius: 1rem;
-        }
-        & .time {
-          font-weight: 500;
-          font-size: 1.2rem;
-          color: rgba(0, 0, 0, 0.25);
-          margin: 0.8rem 0;
-        }
-      }
-      & .left {
-            align-items: flex-start;
-            & .message {
-                  background-color:rgba(0, 0, 0, 0.25);
-              }
-        }
-      & .right {
-          align-items: flex-end;
-          & .message {
-                background-color:#1A66FF;
-                color: #fff;
-            }
-        }
     }
   }
 }
