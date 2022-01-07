@@ -67,7 +67,10 @@ const data = {
   recents: [
     {
       user: {
-        name: "Raghav",
+        id: 1,
+        username: "elmanastanov",
+        name: "Elman",
+        surname: "Astanov",
       },
       message: {
         content: "Dinner?",
@@ -78,7 +81,10 @@ const data = {
     },
     {
       user: {
-        name: "Swathi",
+        id: 3,
+        username: "lamanmuradzada",
+        name: "Ləman",
+        surname: "Muradzadə",
       },
       message: {
         content: "Sure!",
@@ -89,7 +95,10 @@ const data = {
     },
     {
       user: {
-        name: "Kiran",
+        id: 4,
+        username: "xeyyamomar",
+        name: "Xeyyam",
+        surname: "Omar",
       },
       message: [
         {
@@ -108,8 +117,10 @@ const data = {
     },
     {
       user: {
-        name: "Tejeshwini",
-        surname: "C",
+        id: 5,
+        username: "elvinmammadli",
+        name: "Elvin",
+        surname: "Mammadli",
       },
       message: {
         content: "I will call him today.",
