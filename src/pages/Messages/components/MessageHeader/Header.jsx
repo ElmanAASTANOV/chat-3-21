@@ -1,8 +1,11 @@
 import img from "../../profile-picture/profileImage";
 import CallIcon from "@mui/icons-material/Call";
 import VideocamIcon from '@mui/icons-material/Videocam';
+import {useSelector} from 'react-redux';
+import {getChatUser} from 'store/selectors/selectors';
 
 const MessageHeader = ({ profile_photo }) => {
+  const user = useSelector(getChatUser)
   return (
     <div className="messages-header">
       <div className="profile-details">
@@ -11,7 +14,7 @@ const MessageHeader = ({ profile_photo }) => {
           <div className="online-indicator"></div>
         </div>
         <div className="profile-title">
-          <p>Swathi</p>
+          <p>{user?.name}</p>
           <small>Online</small>
         </div>
       </div>

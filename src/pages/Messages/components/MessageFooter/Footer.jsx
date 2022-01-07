@@ -3,9 +3,12 @@ import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt
 import MicIcon from "@mui/icons-material/Mic";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import { useRef } from 'react';
+import {useSelector} from 'react-redux';
+import {getChatUser} from 'store/selectors/selectors';
 
 const MessageFooter = ({ setMessages }) => {
   const inputRef = useRef();
+  const user = useSelector(getChatUser)
   return (
     <div className="message-footer">
       <div className="input-container">
@@ -25,7 +28,7 @@ const MessageFooter = ({ setMessages }) => {
         let text = inputRef.current.value;
         if (socket && !!text) {
           socket.send(JSON.stringify({
-            id: 4,
+            id: user.id,
             message: text
           }))
           setMessages(old => {

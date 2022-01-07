@@ -4,7 +4,9 @@ const initData = {
   groups: [],
   recents: [],
   friends: [],
-  recentCalls: []
+  recentCalls: [],
+  selectedChatUser: null,
+
 }
 
 
@@ -38,6 +40,11 @@ const reducer = (store = initData, action) => {
       return {
         ...store,
         searchResult: action.data
+      }
+    case ACTION_TYPES.SET_CHAT_USER:
+      return {
+        ...store,
+        selectedChatUser: action.data
       }
 
     default:

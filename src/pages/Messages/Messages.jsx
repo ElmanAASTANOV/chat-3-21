@@ -1,12 +1,11 @@
-import React from "react";
-import SearchBar from "components/SearchBar";
-import Table, { ContactItem } from "components/Table";
-import Topbar from "components/Topbar";
+import { useState, useEffect } from "react";
+import SearchBar from 'components/SearchBar';
+import Groups from "pages/Home-Page/components/Groups";
+import Recents from "pages/Home-Page/components/Recents";
 import MessageHeader from "./components/MessageHeader";
 import MessageText from "./components/MessageText";
 import MessageFooter from "./components/MessageFooter";
-import { useState, useEffect } from "react";
-import { getMessages } from "api/messages";
+// import { getMessages } from "api/messages";
 import { LS } from 'utils';
 import { appConfig } from 'config';
 
@@ -30,6 +29,11 @@ function Messages() {
         return copyArray
       });
     })
+
+    return () => {
+      window.socket.close();
+      window.socket = undefined;
+    }
   }, [])
   // useEffect(() => {
   //   getMessages()
@@ -39,21 +43,9 @@ function Messages() {
 
   return (
     <div className="messages-page">
-      <div className="esearchBar">
-        <SearchBar />
-      </div>
-
-      <div className="egroups">
-        <Topbar heading="Groups" />
-        <Table></Table>
-      </div>
-
-      <div className="erecents">
-        <Topbar heading="Recents" />
-        <Table>
-          
-        </Table>
-      </div>
+      <SearchBar />
+      <Groups />
+      <Recents />
 
       <div className="messages">
         <MessageHeader />
@@ -62,7 +54,7 @@ function Messages() {
             <MessageText key={index} content={message.data} time={message.date} type={message.type} />
           ))}
         </div>
-        <MessageFooter setMessages = {setMessages} />
+        <MessageFooter setMessages={setMessages} />
       </div>
     </div>
   );

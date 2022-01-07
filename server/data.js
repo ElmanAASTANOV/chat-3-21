@@ -53,7 +53,7 @@ const data = {
   groups: [
     {
       name: "Friends Reunion",
-      lastMessage: "Hi Guys, Wassup",
+      lastMessage: "Hi Guys, Wassup!",
     },
     {
       name: "Friends Forever",
@@ -61,7 +61,7 @@ const data = {
     },
     {
       name: "Crazy Cousins",
-      lastMessage: "What plans today.",
+      lastMessage: "What plans today?",
     },
   ],
   recents: [
@@ -102,7 +102,7 @@ const data = {
       },
       message: [
         {
-          content: "Hi",
+          content: "Hi...",
           date: "Yesterday, 6:22pm",
           status: messageStatus.read,
           type: messageType.recieve,
@@ -125,6 +125,18 @@ const data = {
       message: {
         content: "I will call him today.",
         date: "Today, 12:22pm",
+        status: messageStatus.sent,
+        type: messageType.send,
+      },
+    },
+    {
+      user: {
+        name: "John",
+        surname: "Dow",
+      },
+      message: {
+        content: "Let's meet at five",
+        date: "Today, 13:30pm",
         status: messageStatus.sent,
         type: messageType.send,
       },
@@ -157,11 +169,20 @@ const data = {
       user: {
         name: "Kiran",
       },
-      message: {
-        content: "Hi, how are you?",
-        date: "Yesterday, 6:22pm",
-        status: messageStatus.read,
-      },
+      message: [
+        {
+          content: "Hi...",
+          date: "Yesterday, 6:22pm",
+          status: messageStatus.read,
+          type: messageType.recieve,
+        },
+        {
+          content: "How are you?",
+          date: "Yesterday, 6:23pm",
+          status: messageStatus.read,
+          type: messageType.recieve,
+        }
+      ],
       isOnline: false,
     },
     {
@@ -188,6 +209,78 @@ const data = {
       },
       isOnline: true,
     },
+    {
+      user: {
+        name: "Kristin",
+        surname: "Watson",
+      },
+      message: {
+        content: "floor/reading lamp",
+        date: "Today, 2:31pm",
+        status: messageStatus.read,
+      },
+      isOnline: true,
+    },
+    {
+      user: {
+        name: "Ralph",
+        surname: "Edwards",
+      },
+      message: {
+        content: "99%",
+        date: "Yesterday, 5:22pm",
+        status: messageStatus.read,
+      },
+      isOnline: false,
+    },
+    {
+      user: {
+        name: "Savannah",
+        surname: "Nguyen",
+      },
+      message: {
+        content: "He's down on his luck.",
+        date: "Yesterday, 1:22pm",
+        status: messageStatus.read,
+      },
+      isOnline: true,
+    },
+    {
+      user: {
+        name: "Mary",
+        surname: "Roseflower",
+      },
+      message: {
+        content: "What a big truck!",
+        date: "Yesterday, 4:56pm",
+        status: messageStatus.read,
+      },
+      isOnline: false,
+    },
+    {
+      user: {
+        name: "Eleanor",
+        surname: "Pena",
+      },
+      message: {
+        content: "Tom is in a big hurry",
+        date: "Yesterday",
+        status: messageStatus.read,
+      },
+      isOnline: false,
+    },
+    {
+      user: {
+        name: "Robert",
+        surname: "Fox",
+      },
+      message: {
+        content: "What a big boy he is!",
+        date: "2 days ago",
+        status: messageStatus.read,
+      },
+      isOnline: false,
+    }
   ],
   recentCalls: [
     {
@@ -223,6 +316,69 @@ const data = {
       callType: callType.call,
       messageType: messageType.recieve,
     },
+    {
+      user: {
+        name: "Marvin",
+        surname: "McKinney",
+      },
+      date: "Today, 8:56pm",
+      callType: callType.video,
+      messageType: messageType.send,
+    },
+    {
+      user: {
+        name: "Kristin",
+        surname: "Watson",
+      },
+      date: "Today, 2:31pm",
+      callType: callType.video,
+      messageType: messageType.send,
+    },
+    {
+      user: {
+        name: "Ralph",
+        surname: "Edwards",
+      },
+      date: "Yesterday, 5:22pm",
+      callType: callType.call,
+      messageType: messageType.send,
+    },
+    {
+      user: {
+        name: "Savannah",
+        surname: "Nguyen",
+      },
+      date: "Yesterday, 1:22pm",
+      callType: callType.video,
+      messageType: messageType.recieve,
+    },
+    {
+      user: {
+        name: "Mary",
+        surname: "Roseflower",
+      },
+      date: "Yesterday,4:56pm",
+      callType: callType.call,
+      messageType: messageType.recieve,
+    },
+    {
+      user: {
+        name: "Eleanor",
+        surname: "Pena",
+      },
+      date: "yesterday",
+      callType: callType.call,
+      messageType: messageType.send,
+    },
+    {
+      user: {
+        name: "Robert",
+        surname: "Fox",
+      },
+      date: "2 days ago",
+      callType: callType.video,
+      messageType: messageType.recieve,
+    }
   ],
   notifications: [
     {

@@ -2,7 +2,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as selectors from 'store/selectors/selectors';
-// import store from 'store/store';
 import * as actions from 'store/actions/actions'
 
 
@@ -22,11 +21,12 @@ function SearchBar() {
   useEffect(() => {
     const res = searchFunction(groups, input)
     dispatch(actions.setSearchResult(res))
-    
+
   }, [input, groups, dispatch])
 
   return (
-    <>
+    <div className="esearchBar">
+
       <SearchIcon fontSize='' className='esearchIcon' />
       <input className='searchBar' type="text" placeholder='Search' defaultValue={input}
         onChange={e => setInput(e.target.value)} />
@@ -35,7 +35,8 @@ function SearchBar() {
         <span className="edot"></span>
         <span className="edot"></span>
       </div>
-    </>
+
+    </div>
   )
 }
 
