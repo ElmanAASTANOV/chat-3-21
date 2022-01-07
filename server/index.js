@@ -76,10 +76,9 @@ wss.on("connection", function connection(ws, req) {
     ws.on("message", function message(data) {
         parsedData = JSON.parse(data);
         sessions[parsedData.id]?.send(JSON.stringify({
-            from: parsedData.id,
+            from: id,
             message: parsedData.message
         }))
-
     });
 })
 

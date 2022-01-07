@@ -37,7 +37,7 @@ function Messages() {
         <MessageHeader />
         <div className="message-content">
           <div className="message-line left">
-            <p className="message">Hey There !</p>
+            <p className="message">Hey Elvin !</p>
             <small className="time">Today, 2:01pm</small>
           </div>
           <div className="message-line right">

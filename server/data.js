@@ -14,20 +14,21 @@ const callType = {
 const data = {
   users: [
     {
-      id:1,
+      id: 1,
       username: "elmanastanov",
       password: "1234",
       name: "Elman",
       surname: "Astanov",
     },
     {
-      id:2,
+      id: 2,
       username: "admin",
       password: "1234",
       name: "Admin",
       surname: "",
     },
     {
+      id: 3,
       username: "lamanmuradzada",
       password: "12345",
       name: "Ləman",
@@ -35,12 +36,14 @@ const data = {
     },
 
     {
+      id: 4,
       username: "xeyyamomar",
       password: "1234",
       name: "Xeyyam",
       surname: "Omar",
     },
     {
+      id: 5,
       username: "elvinmammadli",
       password: "1234",
       name: "Elvin",
