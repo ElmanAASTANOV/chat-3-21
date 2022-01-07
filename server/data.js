@@ -27,6 +27,25 @@ const data = {
       name: "Admin",
       surname: "",
     },
+    {
+      username: "lamanmuradzada",
+      password: "12345",
+      name: "Ləman",
+      surname: "Muradzadə",
+    },
+
+    {
+      username: "xeyyamomar",
+      password: "1234",
+      name: "Xeyyam",
+      surname: "Omar",
+    },
+    {
+      username: "elvinmammadli",
+      password: "1234",
+      name: "Elvin",
+      surname: "Mammadli",
+    },
   ],
   groups: [
     {
@@ -74,13 +93,13 @@ const data = {
           content: "Hi",
           date: "Yesterday, 6:22pm",
           status: messageStatus.read,
-          type: messageType.recieves,
+          type: messageType.recieve,
         },
         {
           content: "How are you?",
           date: "Yesterday, 6:23pm",
           status: messageStatus.read,
-          type: messageType.recieves,
+          type: messageType.recieve,
         },
       ],
     },
@@ -192,30 +211,63 @@ const data = {
     },
   ],
   notifications: [
-      {
-          content: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
-      },
-      {
-          content: "So yes, the alcohol (ethanol) in hand sanitizers can be absorbed through the skin, but no, it would not cause intoxication.",
-      },
-      {
-          content: "How a visual artist redefines success in graphic design",
-      },
-      {
-          content: "For athletes, high altitude produces two contradictory effects on performance. For explosive events (sprints up to 400 metres, long jump, triple jump) the reduction in atmospheric pressure means there is less resistance from the atmosphere and the athlete's performance will generally be better at high altitude.",
-      },
-      {
-          content: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue",
-      },
-      {
-          content: "In fermentum posuere urna nec",
-      },
-      {
-          content: "ID: 22739",
-      },
-      {
-          content: "How We Keep Brand Consistency in Our Visual Language — A Design System for Illustrations",
-      }
+    {
+      content:
+        "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
+    },
+    {
+      content:
+        "So yes, the alcohol (ethanol) in hand sanitizers can be absorbed through the skin, but no, it would not cause intoxication.",
+    },
+    {
+      content: "How a visual artist redefines success in graphic design",
+    },
+    {
+      content:
+        "For athletes, high altitude produces two contradictory effects on performance. For explosive events (sprints up to 400 metres, long jump, triple jump) the reduction in atmospheric pressure means there is less resistance from the atmosphere and the athlete's performance will generally be better at high altitude.",
+    },
+    {
+      content:
+        "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue",
+    },
+    {
+      content: "In fermentum posuere urna nec",
+    },
+    {
+      content: "ID: 22739",
+    },
+    {
+      content:
+        "How We Keep Brand Consistency in Our Visual Language — A Design System for Illustrations",
+    },
+    {
+      content:
+        "How We Keep Brand Consistency in Our Visual Language — A Design System for Illustrations ",
+    },
+    {
+      content:
+        "How We Keep Brand Consistency in Our Visual Language — A Design System for Illustrations ",
+    },
+    {
+      content:
+        "How We Keep Brand Consistency in Our Visual Language — A Design System for Illustrations ",
+    },
+    {
+      content:
+        "How We Keep Brand Consistency in Our Visual Language — A Design System for Illustrations ",
+    },
+  ],
+  messages: [
+    {
+      data: "Salam",
+      type: messageType.recieve,
+      date: "Today, 2:02pm"
+    },
+    {
+      data: "Sagol",
+      type: messageType.send,
+      date: "Today, 2:02pm"
+    },
   ]
 };
 
