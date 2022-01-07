@@ -14,12 +14,14 @@ const callType = {
 const data = {
   users: [
     {
+      id:1,
       username: "elmanastanov",
       password: "1234",
       name: "Elman",
       surname: "Astanov",
     },
     {
+      id:2,
       username: "admin",
       password: "1234",
       name: "Admin",
