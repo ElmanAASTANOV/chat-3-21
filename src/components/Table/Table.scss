@@ -136,4 +136,8 @@
       }
     }
   }
+  
+  & > .selected {
+    border-bottom: 3px solid rgb(0, 64, 255);
+  }
 }

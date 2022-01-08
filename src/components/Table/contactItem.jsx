@@ -7,12 +7,29 @@ import DoneAllIcon from '@mui/icons-material/DoneAll';
 import img from 'pages/Home-Page/profile-picture/profileImage';
 import { useDispatch } from 'react-redux';
 import { setChatUser } from 'store/actions/actions';
+import { useState } from 'react';
 
-const ContactItem = ({ user, message, time, callType, messageType, type, status, onlineStatus, unreadMessageCount }) => {
+const ContactItem = ({ onClick, user, message, time, callType, messageType, type, status, onlineStatus, unreadMessageCount }) => {
   const dispatch = useDispatch();
+  const [selected, setSelected] = useState(false)
+  const [unselected, setUnSelected] = useState(true)
+
+
+  const handleSelected = () => {
+    setSelected(!selected);
+    setUnSelected(!unselected);
+  }
 
   return (
-    <div className="econtact" onClick={(e) => { dispatch(setChatUser(user)) }}>
+    <div className={`econtact`} onClick={(e) => {
+      dispatch(setChatUser(user));
+      if(window.location.pathname === '/messages') {
+        e.currentTarget.classList.add("selected")
+        console.log(e.)
+        // handleSelected()
+        // console.log(selected)
+      }
+    }}>
       <div className="eleft">
         {onlineStatus && <div className="online-status"></div>}
         <img src={img} className='eprofile-picture' alt='' />
