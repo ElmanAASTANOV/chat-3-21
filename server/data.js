@@ -72,12 +72,7 @@ const data = {
         name: "Elman",
         surname: "Astanov",
       },
-      message: {
-        content: "Dinner?",
-        date: "Today, 8:56pm",
-        status: messageStatus.read,
-        type: messageType.send,
-      },
+      message: [],
     },
     {
       user: {
@@ -86,12 +81,7 @@ const data = {
         name: "Ləman",
         surname: "Muradzadə",
       },
-      message: {
-        content: "Sure!",
-        date: "Today, 2:31pm",
-        status: messageStatus.reach,
-        type: messageType.send,
-      },
+      message: [],
     },
     {
       user: {
@@ -122,24 +112,7 @@ const data = {
         name: "Elvin",
         surname: "Mammadli",
       },
-      message: {
-        content: "I will call him today.",
-        date: "Today, 12:22pm",
-        status: messageStatus.sent,
-        type: messageType.send,
-      },
-    },
-    {
-      user: {
-        name: "John",
-        surname: "Dow",
-      },
-      message: {
-        content: "Let's meet at five",
-        date: "Today, 13:30pm",
-        status: messageStatus.sent,
-        type: messageType.send,
-      },
+      message: [],
     },
   ],
   friends: [

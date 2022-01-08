@@ -46,6 +46,21 @@ const reducer = (store = initData, action) => {
         ...store,
         selectedChatUser: action.data
       }
+    case ACTION_TYPES.ADD_NEW_MESSAGE:
+      let recents = store.recents;
+      let data = action.data;
+      for (let i = 0; i < recents.length; i++) {
+        if (recents[i].user.id == data.oppositeSideId) {
+          recents[i].message.push({
+            content: data.content,
+            date: data.date,
+            type: data.type,
+          })
+        }
+      }
+
+      return { ...store, recents: [...recents] };
+
 
     default:
       return store;

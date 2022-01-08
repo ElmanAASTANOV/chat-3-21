@@ -6,3 +6,4 @@ export const setFriends = (data) => ({ type: ACTION_TYPES.SETFRIENDS, data })
 export const setRecentCalls = (data) => ({ type: ACTION_TYPES.SETRECENTCALLS, data })
 export const setSearchResult = (data) => ({ type: ACTION_TYPES.SETSEARCHRESULT, data })
 export const setChatUser = (data) => ({ type: ACTION_TYPES.SET_CHAT_USER, data })
+export const addNewMessage = (data) => ({ type: ACTION_TYPES.ADD_NEW_MESSAGE, data });

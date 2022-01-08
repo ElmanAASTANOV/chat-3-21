@@ -3,19 +3,41 @@ import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt
 import MicIcon from "@mui/icons-material/Mic";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import { useRef } from 'react';
-import {useSelector} from 'react-redux';
-import {getChatUser} from 'store/selectors/selectors';
+import { useSelector, useDispatch } from 'react-redux';
+import { getChatUser } from 'store/selectors/selectors';
+import { addNewMessage } from 'store/actions/actions';
 
-const MessageFooter = ({ setMessages }) => {
+const MessageFooter = () => {
   const inputRef = useRef();
   const user = useSelector(getChatUser)
+  const dispatch = useDispatch();
   return (
     <div className="message-footer">
       <div className="input-container">
         <span>
           <MessageIcon className="icon icon-message" />
         </span>
-        <input ref={inputRef} className="message-text-input" type="text" />
+        <input ref={inputRef} onKeyDown={function(event){
+          if (event.code === "Enter") {
+
+            let text = event.currentTarget.value;
+            const socket = window.socket;
+            if (socket && !!text) {
+              socket.send(JSON.stringify({
+                id: user.id,
+                message: text
+              }))
+              dispatch(addNewMessage({
+                content: text,
+                date: "",
+                type: 2,
+                oppositeSideId: user.id,
+              }))
+              inputRef.current.value = "";
+            }
+          }
+
+        }} className="message-text-input" type="text" />
         <span>
           <SentimentSatisfiedAltIcon className="icon icon-smile" />
         </span>
@@ -23,26 +45,7 @@ const MessageFooter = ({ setMessages }) => {
           <CameraAltIcon className="icon icon-cam" />
         </span>
       </div>
-      <div className="mic-icon" onClick={() => {
-        const socket = window.socket;
-        let text = inputRef.current.value;
-        if (socket && !!text) {
-          socket.send(JSON.stringify({
-            id: user.id,
-            message: text
-          }))
-          setMessages(old => {
-            let copyArray = [...old];
-            copyArray.push({
-              data: text,
-              date: "",
-              type: 2,
-            })
-            return copyArray
-          });
-          inputRef.current.value = "";
-        }
-      }}>
+      <div className="mic-icon">
         <MicIcon className="icon icon-mic" />
       </div>
     </div>
