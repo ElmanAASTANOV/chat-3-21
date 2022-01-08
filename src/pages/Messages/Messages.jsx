@@ -13,6 +13,7 @@ import * as selectors from 'store/selectors/selectors';
 import { appConfig } from 'config';
 import { addNewMessage } from "store/actions/actions";
 
+
 function Messages() {
   const [messages, setMessages] = useState([]);
   const userData = JSON.parse(LS.getItemLocalStorage(appConfig.userData))
