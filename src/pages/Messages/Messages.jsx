@@ -9,9 +9,11 @@ import MessageFooter from "./components/MessageFooter";
 import { LS } from 'utils';
 import { appConfig } from 'config';
 
+
 function Messages() {
   const [messages, setMessages] = useState([]);
-  const userData = JSON.parse(LS.getItemLocalStorage(appConfig.userData))
+  const userData = JSON.parse(LS.getItemLocalStorage(appConfig.userData));
+
 
   useEffect(() => {
     window.socket = new WebSocket(`ws://10.50.93.33:3003/?id=${userData.id}`)
@@ -45,7 +47,7 @@ function Messages() {
     <div className="messages-page">
       <SearchBar />
       <Groups />
-      <Recents />
+      <Recents/>
 
       <div className="messages">
         <MessageHeader />
