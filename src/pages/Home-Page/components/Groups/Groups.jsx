@@ -2,7 +2,6 @@ import Topbar from 'components/Topbar';
 import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getGroups } from 'api/groups';
 import * as selectors from 'store/selectors/selectors';
 import * as actions from 'store/actions/actions';
 
@@ -14,9 +13,7 @@ function Groups() {
 
 
   useEffect(() => {
-    getGroups()
-      .then(res => dispatch(actions.setGroups(res)))
-      .catch(err => console.log(err))
+    dispatch(actions.fetchGroups())
   }, [dispatch])
 
   return (

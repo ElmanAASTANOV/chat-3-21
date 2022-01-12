@@ -2,7 +2,6 @@ import Topbar from 'components/Topbar';
 import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getFriends } from 'api/friends';
 import * as selectors from 'store/selectors/selectors';
 import * as actions from 'store/actions/actions';
 
@@ -12,9 +11,7 @@ function Friends() {
   const friends = useSelector(selectors.getFriends);
 
   useEffect(() => {
-    getFriends()
-      .then(res => dispatch(actions.setFriends(res)))
-      .catch(err => console.log(err))
+    dispatch(actions.fetchFriends())
   }, [dispatch])
 
   return (
