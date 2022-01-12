@@ -2,26 +2,17 @@ import Topbar from 'components/Topbar';
 import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getRecents } from 'api/recents';
 import * as selectors from 'store/selectors/selectors';
 import * as actions from 'store/actions/actions';
-import { LS } from 'utils';
-import { appConfig } from 'config';
+
 
 
 function Recents({ onRender }) {
   const dispatch = useDispatch();
   const recents = useSelector(selectors.getRecents);
-  const userData = JSON.parse(LS.getItemLocalStorage(appConfig.userData))
 
   useEffect(() => {
-    getRecents()
-      .then(res => {
-        let filtered = res.filter( data => data.user.id !== userData.id)
-
-        dispatch(actions.setRecents(filtered))
-      })
-      .catch(err => console.log(err))
+      dispatch(actions.fetchRecents())
   }, [dispatch])
 
   return (
