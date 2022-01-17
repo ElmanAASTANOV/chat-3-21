@@ -2,7 +2,7 @@ import img from "../../profile-picture/profileImage";
 import CallIcon from "@mui/icons-material/Call";
 import VideocamIcon from '@mui/icons-material/Videocam';
 import {useSelector} from 'react-redux';
-import {getChatUser} from 'store/selectors/selectors';
+import {getChatUser} from 'store/chatUser/chatUser.selectors';
 
 const MessageHeader = ({ profile_photo }) => {
   const user = useSelector(getChatUser)

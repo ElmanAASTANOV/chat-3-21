@@ -2,8 +2,8 @@ import Topbar from 'components/Topbar';
 import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import * as selectors from 'store/selectors/selectors';
-import * as actions from 'store/actions/actions';
+import * as selectors from 'store/friends/friends.selectors';
+import * as actions from 'store/friends/friends.actions';
 
 
 function Friends() {
@@ -21,7 +21,7 @@ function Friends() {
         {
           friends.map((data, index) => <ContactItem
             key={index}
-            name={data.user.name}
+            user={data.user}
             message={data.message.content || data.message[0].content}
             onlineStatus = {data.isOnline}
             time={data.message.date} />)

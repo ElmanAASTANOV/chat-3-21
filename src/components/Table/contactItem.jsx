@@ -6,7 +6,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import img from 'pages/Home-Page/profile-picture/profileImage';
 import { useDispatch } from 'react-redux';
-import { setChatUser } from 'store/actions/actions';
+import { setChatUser } from 'store/chatUser/chatUser.actions';
 import classNames from 'classnames';
 
 const ContactItem = ({ user, message, time, callType, messageType, type, status, onlineStatus, unreadMessageCount, selected }) => {

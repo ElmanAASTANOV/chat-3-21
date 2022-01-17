@@ -2,15 +2,14 @@ import Topbar from 'components/Topbar';
 import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import * as selectors from 'store/selectors/selectors';
-import * as actions from 'store/actions/actions';
-
+import * as selectors from 'store/recents/recents.selectors';
+import * as actions from 'store/recents/recents.actions';
 
 
 function Recents({ onRender }) {
   const dispatch = useDispatch();
   const recents = useSelector(selectors.getRecents);
-
+  
   useEffect(() => {
       dispatch(actions.fetchRecents())
   }, [dispatch])

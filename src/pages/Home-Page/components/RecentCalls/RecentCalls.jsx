@@ -3,8 +3,8 @@ import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRecentCalls } from 'api/recentCalls';
-import * as selectors from 'store/selectors/selectors';
-import * as actions from 'store/actions/actions';
+import * as selectors from 'store/recentCalls/recentCalls.selectors';
+import * as actions from 'store/recentCalls/recentCalls.actions';
 
 
 function RecentCalls() {
@@ -24,7 +24,7 @@ function RecentCalls() {
           {
             recentCalls.map((data, index) => <ContactItem
               key={index}
-              name={data.user.name}
+              user={data.user}
               message={data.date}
               callType={data.callType}
               messageType={data.messageType}

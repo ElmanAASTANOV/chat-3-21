@@ -1,15 +1,15 @@
 import SearchIcon from '@mui/icons-material/Search';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import * as selectors from 'store/selectors/selectors';
-import * as actions from 'store/actions/actions'
+import * as groupsSelectors from 'store/groups/groups.selectors';
+import { setSearchResult } from 'store/searchResult/searchResult.actions'
 
 
 function SearchBar() {
 
   const dispatch = useDispatch();
   const [input, setInput] = useState('');
-  const groups = useSelector(selectors.getGroups);
+  const groups = useSelector(groupsSelectors.getGroups);
 
   const searchFunction = (array, string) => {
     const text = string.toLowerCase();
@@ -20,7 +20,7 @@ function SearchBar() {
 
   useEffect(() => {
     const res = searchFunction(groups, input)
-    dispatch(actions.setSearchResult(res))
+    dispatch(setSearchResult(res))
 
   }, [input, groups, dispatch])
 

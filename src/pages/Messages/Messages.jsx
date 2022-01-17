@@ -9,16 +9,17 @@ import MessageFooter from "./components/MessageFooter";
 // import { getMessages } from "api/messages";
 import { LS } from 'utils';
 import { useDispatch, useSelector } from 'react-redux';
-import * as selectors from 'store/selectors/selectors';
+import * as selectors from 'store/chatUser/chatUser.selectors';
+import { getRecents } from "store/recents/recents.selectors";
 import { appConfig } from 'config';
-import { addNewMessage } from "store/actions/actions";
+import { addNewMessage } from "store/addNewMessage/addNewMessage.actions";
 
 
 function Messages() {
   const [messages, setMessages] = useState([]);
   const userData = JSON.parse(LS.getItemLocalStorage(appConfig.userData))
-  const chatUser = useSelector(selectors.getChatUser)
-  const recents = useSelector(selectors.getRecents)
+  const chatUser = useSelector(selectors.getChatUser);
+  const recents = useSelector(getRecents)
   const dispatch = useDispatch();
 
   useEffect(() => {

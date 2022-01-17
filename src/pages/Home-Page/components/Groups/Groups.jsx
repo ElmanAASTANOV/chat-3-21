@@ -2,18 +2,19 @@ import Topbar from 'components/Topbar';
 import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import * as selectors from 'store/selectors/selectors';
-import * as actions from 'store/actions/actions';
+import * as groupsSelectors from 'store/groups/groups.selectors';
+import * as groupsActions from 'store/groups/groups.actions';
+import * as selectors from 'store/searchResult/searchResult.selectors'
 
 
 function Groups() {
   const dispatch = useDispatch();
-  const groups = useSelector(selectors.getGroups);
+  const groups = useSelector(groupsSelectors.getGroups);
   const searchResult = useSelector(selectors.getSearchResult);
-
+  console.log(groups)
 
   useEffect(() => {
-    dispatch(actions.fetchGroups())
+    dispatch(groupsActions.fetchGroups())
   }, [dispatch])
 
   return (
@@ -22,11 +23,11 @@ function Groups() {
       <Table>
         {searchResult?.map((data, index) => <ContactItem
           key={index}
-          name={data.name}
+          user={data}
           message={data.lastMessage} />) ||
           groups.map((data, index) => <ContactItem
             key={index}
-            name={data.name}
+            user={data}
             message={data.lastMessage} />)
         }
       </Table>

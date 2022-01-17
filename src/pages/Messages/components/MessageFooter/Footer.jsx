@@ -4,8 +4,8 @@ import MicIcon from "@mui/icons-material/Mic";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getChatUser } from 'store/selectors/selectors';
-import { addNewMessage } from 'store/actions/actions';
+import { getChatUser } from 'store/chatUser/chatUser.selectors';
+import { addNewMessage } from 'store/addNewMessage/addNewMessage.actions';
 
 const MessageFooter = () => {
   const inputRef = useRef();
