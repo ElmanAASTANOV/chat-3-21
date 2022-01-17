@@ -1,0 +1,1 @@
+export const getRecentCalls = store => store.recentCalls.data;

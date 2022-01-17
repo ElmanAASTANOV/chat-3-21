@@ -1,0 +1,3 @@
+export const SET_CHAT_USER_ACTION_TYPES = {
+  SET_CHAT_USER: '@@SET-CHAT-USER',
+}

@@ -1,0 +1,1 @@
+export const getChatUser = store => store.chatUser.data;

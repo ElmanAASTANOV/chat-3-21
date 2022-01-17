@@ -1,0 +1,1 @@
+export const getSearchResult = store => store.searchResult.data;
