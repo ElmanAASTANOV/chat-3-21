@@ -11,7 +11,6 @@ function Groups() {
   const dispatch = useDispatch();
   const groups = useSelector(groupsSelectors.getGroups);
   const searchResult = useSelector(selectors.getSearchResult);
-  console.log(groups)
 
   useEffect(() => {
     dispatch(groupsActions.fetchGroups())

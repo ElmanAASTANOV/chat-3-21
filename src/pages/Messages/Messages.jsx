@@ -72,7 +72,7 @@ function Messages() {
         <div className="messages">
           <MessageHeader />
           <div className="message-content">
-            {messages.map((message, index) => (
+            {messages?.map((message, index) => (
               <MessageText key={index} content={message.content} time={message.date} type={message.type} />
             ))}
           </div>
