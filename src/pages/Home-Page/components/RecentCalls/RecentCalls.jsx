@@ -3,18 +3,15 @@ import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRecentCalls } from 'api/recentCalls';
-import * as selectors from 'store/recentCalls/recentCalls.selectors';
-import * as actions from 'store/recentCalls/recentCalls.actions';
+import { RECENTCALLS_ACTIONS, RECENTCALLS_SELECTORS } from 'store/recentCalls';
 
 
 function RecentCalls() {
   const dispatch = useDispatch();
-  const recentCalls = useSelector(selectors.getRecentCalls);
+  const recentCalls = useSelector(RECENTCALLS_SELECTORS.getRecentCalls);
 
   useEffect(() => {
-    getRecentCalls()
-      .then(res => dispatch(actions.setRecentCalls(res)))
-      .catch(err => console.log(err))
+    dispatch(RECENTCALLS_ACTIONS.setRecentCalls())
   }, [dispatch])
 
   return (
@@ -22,7 +19,7 @@ function RecentCalls() {
         <Topbar heading='Recent Calls' />
         <Table>
           {
-            recentCalls.map((data, index) => <ContactItem
+            recentCalls?.map((data, index) => <ContactItem
               key={index}
               user={data.user}
               message={data.date}

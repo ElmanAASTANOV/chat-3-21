@@ -2,18 +2,17 @@ import Topbar from 'components/Topbar';
 import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import * as groupsSelectors from 'store/groups/groups.selectors';
-import * as groupsActions from 'store/groups/groups.actions';
-import * as selectors from 'store/searchResult/searchResult.selectors'
+import { getSearchResult } from 'store/searchResult/searchResult.selectors'
+import { GROUPS_SELECTORS, GROUPS_ACTIONS } from 'store/groups';
 
 
 function Groups() {
   const dispatch = useDispatch();
-  const groups = useSelector(groupsSelectors.getGroups);
-  const searchResult = useSelector(selectors.getSearchResult);
+  const groups = useSelector(GROUPS_SELECTORS.getGroups);
+  const searchResult = useSelector(getSearchResult);
 
   useEffect(() => {
-    dispatch(groupsActions.fetchGroups())
+    dispatch(GROUPS_ACTIONS.fetchGroups())
   }, [dispatch])
 
   return (

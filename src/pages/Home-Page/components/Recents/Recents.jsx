@@ -2,16 +2,15 @@ import Topbar from 'components/Topbar';
 import Table, { ContactItem } from 'components/Table';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import * as selectors from 'store/recents/recents.selectors';
-import * as actions from 'store/recents/recents.actions';
+import { RECENTS_SELECTORS, RECENTS_ACTIONS } from 'store/recents';
 
 
 function Recents({ onRender }) {
   const dispatch = useDispatch();
-  const recents = useSelector(selectors.getRecents);
+  const recents = useSelector(RECENTS_SELECTORS.getRecents);
   
   useEffect(() => {
-      dispatch(actions.fetchRecents())
+      dispatch(RECENTS_ACTIONS.fetchRecents())
   }, [dispatch])
 
   return (
@@ -19,7 +18,7 @@ function Recents({ onRender }) {
       <Topbar heading='Recents' />
       <Table>
         {
-          recents.map((data, index) => onRender ? onRender(data, index) : <ContactItem
+          recents?.map((data, index) => onRender ? onRender(data, index) : <ContactItem
             key={index}
             user={data.user}
             message={

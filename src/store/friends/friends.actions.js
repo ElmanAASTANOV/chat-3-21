@@ -1,12 +1,6 @@
-import { getFriends } from "api/friends";
 import { FRIENDS_ACTION_TYPES } from "./friends.action-types";
 
-export const setFriends = (data) => ({ type: FRIENDS_ACTION_TYPES.SETFRIENDS, data })
-
-export const fetchFriends = () => dispatch => {
-    getFriends()
-        .then(data => {
-            dispatch(setFriends(data))
-        })
-        .catch(err => console.log(err))
-}
+export const setFriends = (data) => ({ type: FRIENDS_ACTION_TYPES.SET_FRIENDS, data })
+export const setFriendsLoading = () => ({ type: FRIENDS_ACTION_TYPES.SET_FRIENDS_LOADING})
+export const setFriendsError = (error) => ({ type: FRIENDS_ACTION_TYPES.SET_FRIENDS_ERROR, data: error })
+export const fetchFriends = () => ({ type: FRIENDS_ACTION_TYPES.FETCH_FRIENDS })
